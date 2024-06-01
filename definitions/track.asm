@@ -53,7 +53,7 @@
 	sfx_close_menu = #$33
 	sfx_open_menu = #$34
 	sfx_destroy_enemy = #$35
-	sfx_crush = #$36
+	sfx_explosion = #$36
 	sfx_teleport_in = #$37
 	sfx_password_wrong = #$38
 	music_proto_whistle = #$39
