@@ -5,4 +5,5 @@ sfx_jet_mute:
 	sfx_global_flags_bits = $0
 	sfx_frames $00
 	sfx_channel_flags $0
+	sfx_channel_flags_bits = $0
 	sfx_end
