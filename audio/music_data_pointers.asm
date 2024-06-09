@@ -179,8 +179,8 @@
 	dl sfx_unused51
 	dh sfx_flame
 	dl sfx_flame
-	dh sfx_unknown53
-	dl sfx_unknown53
+	dh sfx_heli_buton_appeared
+	dl sfx_heli_buton_appeared
 	dh sfx_spring
 	dl sfx_spring
 	dh sfx_spikes_press_up

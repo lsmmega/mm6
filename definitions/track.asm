@@ -82,7 +82,7 @@
 	sfx_oil = #$50
 	;sfx_unused51 = #$51
 	sfx_flame = #$52
-	sfx_unknown53 = #$53
+	sfx_heli_buton_appeared = #$53
 	sfx_spring = #$54
 	sfx_spikes_press_up = #$55
 	sfx_spikes_press_down = #$56
