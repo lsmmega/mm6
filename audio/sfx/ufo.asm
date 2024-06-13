@@ -6,6 +6,7 @@ sfx_ufo_main_loop:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $0a
 	sfx_channel_flags $6
 	sfx_channel_flags_bits = $6
@@ -25,6 +26,7 @@ sfx_ufo_main_loop:
 ;2
 	sfx_global_flags $0
 	sfx_global_flags_bits = $0
+	sfx_global_transpose_note = $00
 	sfx_frames $0a
 	sfx_channel_flags $6
 	sfx_channel_flags_bits = $6
@@ -40,6 +42,7 @@ sfx_ufo_main_loop:
 	sfx_global_flags $1
 	sfx_global_flags_bits = $1
 	sfx_global_loop 0, sfx_ufo_main_loop
+	sfx_global_transpose_note = $00
 	sfx_frames $00
 	sfx_channel_flags $0
 	sfx_channel_flags_bits = $0
