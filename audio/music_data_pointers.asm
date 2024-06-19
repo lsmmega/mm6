@@ -177,8 +177,8 @@
 	dl sfx_oil
 	dh sfx_unused51
 	dl sfx_unused51
-	dh sfx_flame
-	dl sfx_flame
+	dh sfx_flamethrower
+	dl sfx_flamethrower
 	dh sfx_heli_buton_appeared
 	dl sfx_heli_buton_appeared
 	dh sfx_spring
@@ -191,8 +191,8 @@
 	dl sfx_spikes_press_stop
 	dh sfx_centaur_flash
 	dl sfx_centaur_flash
-	dh sfx_blizzard
-	dl sfx_blizzard
+	dh sfx_blizzard_attack
+	dl sfx_blizzard_attack
 	dh sfx_blizzard_rolling
 	dl sfx_blizzard_rolling
 	dh sfx_blizzard_rollout
