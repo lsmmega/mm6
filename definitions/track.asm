@@ -81,14 +81,14 @@
 	track_fan = #$4f
 	track_oil = #$50
 	;track_unused51 = #$51
-	track_flame = #$52
+	track_flamethrower = #$52
 	track_heli_buton_appeared = #$53
 	track_spring = #$54
 	track_spikes_press_up = #$55
 	track_spikes_press_down = #$56
 	track_spikes_press_stop = #$57
 	track_centaur_flash = #$58
-	track_blizzard = #$59
+	track_blizzard_attack = #$59
 	track_blizzard_rolling = #$5a
 	track_blizzard_rollout = #$5b
 	track_centaur_disappeared1 = #$5c
