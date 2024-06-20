@@ -48,7 +48,7 @@
 	track_beat = #$2e
 	track_1up = #$2f
 	track_boss_door = #$30
-	track_health_bar = #$31
+	track_gain_bar = #$31
 	track_change_weapon = #$32
 	track_close_menu = #$33
 	track_open_menu = #$34
