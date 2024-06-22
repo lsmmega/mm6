@@ -35,5 +35,5 @@ sfx_unused3d:
 	sfx_channel_flags_bits = $8
 	sfx_noise_command_flags $00
 	sfx_noise_command_flags_bits = $00
-	sfx_noise_note $00
+	sfx_noise_ADSR_volume_end
 	sfx_end
