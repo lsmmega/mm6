@@ -26,5 +26,5 @@ sfx_power:
 	sfx_noise_command_flags_bits = $0c
 	sfx_noise_volume $c
 	sfx_noise_pitch_slide $78
-	sfx_noise_note_N_flag
+	sfx_noise_note_sustain
 	sfx_end
