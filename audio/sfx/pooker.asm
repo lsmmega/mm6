@@ -27,7 +27,7 @@ sfx_pooker:
 	sfx_pulse2_command_flags_bits = $0c
 	sfx_pulse2_volume $e
 	sfx_pulse2_pitch_slide $4c
-	sfx_pulse2_note $ff
+	sfx_pulse2_note_sustain
 
 ;3
 	sfx_global_flags $0
@@ -39,5 +39,5 @@ sfx_pooker:
 	sfx_pulse2_command_flags $04
 	sfx_pulse2_command_flags_bits = $04
 	sfx_pulse2_volume $7
-	sfx_pulse2_note $ff
+	sfx_pulse2_note_sustain
 	sfx_end
