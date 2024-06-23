@@ -5,8 +5,8 @@
 	;dh instruments_data
 	;dl instruments_data
 
+track_data_start
 ;music
-	track_data_start
 	dh music_wind
 	dl music_wind
 	;dh music_blizzard
@@ -217,4 +217,4 @@
 	dl sfx_ending_mute
 	;dh sfx_get_weapon
 	;dl sfx_get_weapon
-	track_data_end
+track_data_end
