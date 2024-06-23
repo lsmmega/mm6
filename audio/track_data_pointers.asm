@@ -149,16 +149,16 @@
 	dl sfx_met
 	dh sfx_pooker
 	dl sfx_pooker
-	;dh sfx_colton
-	;dl sfx_colton
-	;dh sfx_fire_telly
-	;dl sfx_fire_telly
-	;dh sfx_teck
-	;dl sfx_teck
-	;dh sfx_curlinger
-	;dl sfx_curlinger
-	;dh sfx_heli_buton
-	;dl sfx_heli_buton
+	dh sfx_colton
+	dl sfx_colton
+	dh sfx_fire_telly
+	dl sfx_fire_telly
+	dh sfx_teck
+	dl sfx_teck
+	dh sfx_curlinger
+	dl sfx_curlinger
+	dh sfx_heli_buton
+	dl sfx_heli_buton
 	;dh sfx_power_slam_up
 	;dl sfx_power_slam_up
 	;dh sfx_enemy_falling

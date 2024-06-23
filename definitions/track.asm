@@ -70,7 +70,7 @@
 	track_colton = #$44
 	track_fire_telly = #$45
 	track_teck = #$46
-	track_curlinger = #$37
+	track_curlinger = #$47
 	track_heli_buton = #$48
 	track_power_slam_up = #$49
 	track_enemy_falling = #$4a

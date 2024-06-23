@@ -1,4 +1,5 @@
 base $8000
+incsrc .\scripts\audio.asm
 pad $8a40
 ;incsrc audio.asm
 incsrc track_data_pointers.asm
@@ -74,11 +75,11 @@ incsrc .\sfx\ship_down.asm
 incsrc .\sfx\ship_up.asm
 incsrc .\sfx\met.asm
 incsrc .\sfx\pooker.asm
-;incsrc .\sfx\colton.asm
-;incsrc .\sfx\fire_telly.asm
-;incsrc .\sfx\teck.asm
-;incsrc .\sfx\curlinger.asm
-;incsrc .\sfx\heli_buton.asm
+incsrc .\sfx\colton.asm
+incsrc .\sfx\fire_telly.asm
+incsrc .\sfx\teck.asm
+incsrc .\sfx\curlinger.asm
+incsrc .\sfx\heli_buton.asm
 ;incsrc .\sfx\power_slam_up.asm
 ;incsrc .\sfx\enemy_falling.asm
 ;incsrc .\sfx\power_slam_down.asm
