@@ -159,36 +159,36 @@ track_data_start
 	dl sfx_curlinger
 	dh sfx_heli_buton
 	dl sfx_heli_buton
-	;dh sfx_power_slam_up
-	;dl sfx_power_slam_up
-	;dh sfx_enemy_falling
-	;dl sfx_enemy_falling
-	;dh sfx_power_slam_down
-	;dl sfx_power_slam_down
-	;dh sfx_skull_walker
-	;dl sfx_skull_walker
-	;dh sfx_unused4d
-	;dl sfx_unused4d
-	;dh sfx_count_bomb
-	;dl sfx_count_bomb
-	;dh sfx_fan
-	;dl sfx_fan
-	;dh sfx_oil
-	;dl sfx_oil
-	;dh sfx_unused51
-	;dl sfx_unused51
-	;dh sfx_flamethrower
-	;dl sfx_flamethrower
-	;dh sfx_heli_buton_appeared
-	;dl sfx_heli_buton_appeared
-	;dh sfx_spring
-	;dl sfx_spring
-	;dh sfx_spikes_press_up
-	;dl sfx_spikes_press_up
-	;dh sfx_spikes_press_down
-	;dl sfx_spikes_press_down
-	;dh sfx_spikes_press_stop
-	;dl sfx_spikes_press_stop
+	dh sfx_power_slam_up
+	dl sfx_power_slam_up
+	dh sfx_enemy_falling
+	dl sfx_enemy_falling
+	dh sfx_power_slam_down
+	dl sfx_power_slam_down
+	dh sfx_skull_walker
+	dl sfx_skull_walker
+	dh sfx_unused4d
+	dl sfx_unused4d
+	dh sfx_count_bomb
+	dl sfx_count_bomb
+	dh sfx_fan
+	dl sfx_fan
+	dh sfx_oil
+	dl sfx_oil
+	dh sfx_unused51
+	dl sfx_unused51
+	dh sfx_flamethrower
+	dl sfx_flamethrower
+	dh sfx_heli_buton_appeared
+	dl sfx_heli_buton_appeared
+	dh sfx_spring
+	dl sfx_spring
+	dh sfx_spikes_press_up
+	dl sfx_spikes_press_up
+	dh sfx_spikes_press_down
+	dl sfx_spikes_press_down
+	dh sfx_spikes_press_stop
+	dl sfx_spikes_press_stop
 	;dh sfx_centaur_flash
 	;dl sfx_centaur_flash
 	;dh sfx_blizzard_attack
