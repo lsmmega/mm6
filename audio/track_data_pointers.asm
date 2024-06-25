@@ -189,22 +189,22 @@ track_data_start
 	dl sfx_spikes_press_down
 	dh sfx_spikes_press_stop
 	dl sfx_spikes_press_stop
-	;dh sfx_centaur_flash
-	;dl sfx_centaur_flash
-	;dh sfx_blizzard_attack
-	;dl sfx_blizzard_attack
-	;dh sfx_blizzard_rolling
-	;dl sfx_blizzard_rolling
-	;dh sfx_blizzard_rollout
-	;dl sfx_blizzard_rollout
-	;dh sfx_centaur_disappeared1
-	;dl sfx_centaur_disappeared1
-	;dh sfx_centaur_disappeared2
-	;dl sfx_centaur_disappeared2
-	;dh sfx_centaur_running
-	;dl sfx_centaur_running
-	;dh sfx_get_weapon_energy
-	;dl sfx_get_weapon_energy
+	dh sfx_centaur_flash
+	dl sfx_centaur_flash
+	dh sfx_blizzard_attack
+	dl sfx_blizzard_attack
+	dh sfx_blizzard_rolling
+	dl sfx_blizzard_rolling
+	dh sfx_blizzard_rollout
+	dl sfx_blizzard_rollout
+	dh sfx_centaur_disappeared1
+	dl sfx_centaur_disappeared1
+	dh sfx_centaur_disappeared2
+	dl sfx_centaur_disappeared2
+	dh sfx_centaur_running
+	dl sfx_centaur_running
+	dh sfx_get_weapon_energy
+	dl sfx_get_weapon_energy
 	;dh sfx_wily_machine
 	;dl sfx_wily_machine
 	dh sfx_lighting
@@ -215,6 +215,6 @@ track_data_start
 	dl sfx_ufo
 	dh sfx_ending_mute
 	dl sfx_ending_mute
-	;dh sfx_get_weapon
-	;dl sfx_get_weapon
+	;dh sfx_get_weapon_blast
+	;dl sfx_get_weapon_blast
 track_data_end

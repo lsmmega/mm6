@@ -20,7 +20,7 @@ sfx_blizzard_rolling:
 	sfx_noise_instrument $20
 	sfx_noise_volume $f
 	sfx_noise_pitch_slide $04
-	sfx_noise_note 3
+	sfx_noise_note 1
 
 ;2
 sfx_blizzard_rolling_loop1:

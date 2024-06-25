@@ -100,4 +100,4 @@
 	track_routine_map = #$62
 	track_ufo = #$63
 	track_ending_mute = #$64
-	track_get_weapon = #$65
+	track_get_weapon_blast = #$65
