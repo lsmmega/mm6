@@ -2,6 +2,7 @@ base $8000
 pad $8a40
 ;incsrc audio.asm
 incsrc track_data_pointers.asm
+pad $8b0f
 ;incsrc instruments.asm
 pad $8d47
 incsrc .\music\wind.asm
