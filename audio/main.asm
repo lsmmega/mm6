@@ -104,11 +104,9 @@ incsrc .\sfx\centaur_disappeared2.asm
 incsrc .\sfx\centaur_running.asm
 incsrc .\sfx\get_weapon_energy.asm
 incsrc .\sfx\wily_machine.asm
-pad $de99
 incsrc .\sfx\lighting.asm
 incsrc .\sfx\routine_map.asm
 incsrc .\sfx\ufo.asm
 incsrc .\sfx\ending_mute.asm
 incsrc .\sfx\get_weapon_blast.asm
-;incsrc .\unused\unusedpre.asm
-pad $e000
+incsrc .\unused\unused6df2c.asm

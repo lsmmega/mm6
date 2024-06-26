@@ -205,8 +205,8 @@ track_data_start
 	dl sfx_centaur_running
 	dh sfx_get_weapon_energy
 	dl sfx_get_weapon_energy
-	;dh sfx_wily_machine
-	;dl sfx_wily_machine
+	dh sfx_wily_machine
+	dl sfx_wily_machine
 	dh sfx_lighting
 	dl sfx_lighting
 	dh sfx_routine_map
@@ -215,6 +215,6 @@ track_data_start
 	dl sfx_ufo
 	dh sfx_ending_mute
 	dl sfx_ending_mute
-	;dh sfx_get_weapon_blast
-	;dl sfx_get_weapon_blast
+	dh sfx_get_weapon_blast
+	dl sfx_get_weapon_blast
 track_data_end
