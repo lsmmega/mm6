@@ -115,8 +115,8 @@ track_data_start
 	dl sfx_close_menu
 	dh sfx_open_menu
 	dl sfx_open_menu
-	dh sfx_destroy_enemy
-	dl sfx_destroy_enemy
+	dh sfx_damage_enemy
+	dl sfx_damage_enemy
 	dh sfx_explosion
 	dl sfx_explosion
 	dh sfx_teleport_in

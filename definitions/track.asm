@@ -52,7 +52,7 @@
 	track_change_weapon = #$32
 	track_close_menu = #$33
 	track_open_menu = #$34
-	track_destroy_enemy = #$35
+	track_damage_enemy = #$35
 	track_explosion = #$36
 	track_teleport_in = #$37
 	track_password_wrong = #$38

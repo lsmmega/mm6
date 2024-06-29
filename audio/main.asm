@@ -60,7 +60,7 @@ incsrc .\sfx\gain_bar.asm
 incsrc .\sfx\change_weapon.asm
 incsrc .\sfx\close_menu.asm
 incsrc .\sfx\open_menu.asm
-incsrc .\sfx\destroy_enemy.asm
+incsrc .\sfx\damage_enemy.asm
 incsrc .\sfx\explosion.asm
 incsrc .\sfx\teleport_in.asm
 incsrc .\sfx\password_wrong.asm
