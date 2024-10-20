@@ -25,5 +25,6 @@ bmp2nes gfx/fill/black.bmp
 bmp2nes gfx/sprites/enemies/teck.bmp
 bmp2nes gfx/fill/teck.bmp
 bmp2nes gfx/sprites/enemies/cannopeller.bmp
+bmp2nes gfx/sprites/enemies/brown.bmp
 asm6 main.asm mm6.nes
 @pause
