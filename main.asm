@@ -9,33 +9,33 @@ incsrc header.asm
 ;bank 0
 base $0
 pad $10
-incbin gfx/obj/mm/mm.chr
-incbin gfx/obj/wpn/charge_shot.chr
+incbin gfx/sprites/megaman/megaman.chr
+incbin gfx/sprites/weapons/charge_shot.chr
 pad $810
-incbin gfx/obj/bar.chr , $10
-incbin gfx/obj/wpn/mega_buster.chr
-incbin gfx/obj/capsule/small_wpn_capsule.chr
-incbin gfx/obj/tank/e_tank.chr
-incbin gfx/obj/capsule/large_life_capsule.chr
-incbin gfx/obj/capsule/small_life_capsule.chr
-incbin gfx/obj/capsule/large_wpn_capsule.chr
-incbin gfx/obj/killed.chr
-incbin gfx/obj/1up.chr
-incbin gfx/obj/ready.chr
-incbin gfx/obj/tank/blank_tank.chr
-incbin gfx/obj/bar.chr , $0, $10
+incbin gfx/sprites/bar/bar_vertical.chr , $10
+incbin gfx/sprites/weapons/mega_buster.chr
+incbin gfx/sprites/capsules/small_weapon_capsule.chr
+incbin gfx/sprites/tanks/e_tank.chr
+incbin gfx/sprites/capsules/large_life_capsule.chr
+incbin gfx/sprites/capsules/small_life_capsule.chr
+incbin gfx/sprites/capsules/large_weapon_capsule.chr
+incbin gfx/sprites/killed.chr
+incbin gfx/sprites/1up.chr
+incbin gfx/sprites/ready.chr
+incbin gfx/sprites/tanks/blank_tank.chr
+incbin gfx/sprites/bar/bar_vertical.chr , $0, $10
 pad $1010
-incbin gfx/obj/mm/pow.chr , $10
+incbin gfx/sprites/megaman/pow.chr , $10
 pad $1810
-incbin gfx/obj/mm/jet.chr , $10
+incbin gfx/sprites/megaman/jet.chr , $10
 
 ;bank 1
 base $0
 pad $10
-incbin gfx/obj/menu/anim/mm_to_jet.chr , $10
+incbin gfx/sprites/menu/animations/megaman_to_jet.chr , $10
 pad $810
-incbin gfx/obj/menu/anim/mm_to_pow.chr , $10
+incbin gfx/sprites/menu/animations/megaman_to_pow.chr , $10
 pad $1010
-incbin gfx/obj/menu/anim/jet_to_pow.chr , $10
+incbin gfx/sprites/menu/animations/jet_to_pow.chr , $10
 pad $1810
-incbin gfx/obj/menu/anim/pow_to_jet.chr , $10
+incbin gfx/sprites/menu/animations/pow_to_jet.chr , $10
