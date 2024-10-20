@@ -20,5 +20,6 @@ bmp2nes gfx/sprites/menus/animations/pow_to_jet.bmp
 bmp2nes gfx/sprites/enemies/rounder_ii.bmp
 bmp2nes gfx/sprites/zakos/zako_dot.bmp
 bmp2nes gfx/sprites/zakos/1.bmp
+bmp2nes gfx/sprites/enemies/shield_attacker_gtr.bmp
 asm6 main.asm mm6.nes
 @pause
