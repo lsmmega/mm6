@@ -18,5 +18,7 @@ bmp2nes gfx/sprites/menus/animations/megaman_to_pow.bmp
 bmp2nes gfx/sprites/menus/animations/jet_to_pow.bmp
 bmp2nes gfx/sprites/menus/animations/pow_to_jet.bmp
 bmp2nes gfx/sprites/enemies/rounder_ii.bmp
+bmp2nes gfx/sprites/zakos/zako_dot.bmp
+bmp2nes gfx/sprites/zakos/1.bmp
 asm6 main.asm mm6.nes
 @pause
