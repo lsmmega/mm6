@@ -32,10 +32,10 @@ incbin gfx/sprites/megaman/jet.chr , $10
 ;bank 1
 base $0
 pad $10
-incbin gfx/sprites/menu/animations/megaman_to_jet.chr , $10
+incbin gfx/sprites/menus/animations/megaman_to_jet.chr , $10
 pad $810
-incbin gfx/sprites/menu/animations/megaman_to_pow.chr , $10
+incbin gfx/sprites/menus/animations/megaman_to_pow.chr , $10
 pad $1010
-incbin gfx/sprites/menu/animations/jet_to_pow.chr , $10
+incbin gfx/sprites/menus/animations/jet_to_pow.chr , $10
 pad $1810
-incbin gfx/sprites/menu/animations/pow_to_jet.chr , $10
+incbin gfx/sprites/menus/animations/pow_to_jet.chr , $10
