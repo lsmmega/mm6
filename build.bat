@@ -11,5 +11,7 @@ bmp2nes gfx/obj/killed.bmp
 bmp2nes gfx/obj/1up.bmp
 bmp2nes gfx/obj/ready.bmp
 bmp2nes gfx/obj/tank/blank_tank.bmp
+bmp2nes gfx/obj/mm/pow.bmp
+bmp2nes gfx/obj/mm/jet.bmp
 asm6 main.asm mm6.nes
 @pause
