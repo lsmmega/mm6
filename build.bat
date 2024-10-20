@@ -21,5 +21,6 @@ bmp2nes gfx/sprites/enemies/rounder_ii.bmp
 bmp2nes gfx/sprites/zakos/zako_dot.bmp
 bmp2nes gfx/sprites/zakos/1.bmp
 bmp2nes gfx/sprites/enemies/shield_attacker_gtr.bmp
+bmp2nes gfx/fill/black.bmp
 asm6 main.asm mm6.nes
 @pause
