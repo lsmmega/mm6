@@ -12,7 +12,7 @@ pad $10
 incbin gfx/sprites/megaman/megaman.chr
 incbin gfx/sprites/weapons/charge_shot.chr
 pad $810
-incbin gfx/sprites/bar/bar_vertical.chr , $10
+incbin gfx/sprites/bars/bar_vertical.chr , $10
 incbin gfx/sprites/weapons/mega_buster.chr
 incbin gfx/sprites/capsules/small_weapon_capsule.chr
 incbin gfx/sprites/tanks/e_tank.chr
@@ -23,7 +23,7 @@ incbin gfx/sprites/killed.chr
 incbin gfx/sprites/1up.chr
 incbin gfx/sprites/ready.chr
 incbin gfx/sprites/tanks/blank_tank.chr
-incbin gfx/sprites/bar/bar_vertical.chr , $0, $10
+incbin gfx/sprites/bars/bar_vertical.chr , $0, $10
 pad $1010
 incbin gfx/sprites/megaman/pow.chr , $10
 pad $1810
