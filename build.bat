@@ -7,7 +7,7 @@ bmp2nes gfx/sprites/tanks/e_tank.bmp
 bmp2nes gfx/sprites/capsules/large_life_capsule.bmp
 bmp2nes gfx/sprites/capsules/small_life_capsule.bmp
 bmp2nes gfx/sprites/capsules/large_weapon_capsule.bmp
-bmp2nes gfx/sprites/killed.bmp
+bmp2nes gfx/sprites/explosion.bmp
 bmp2nes gfx/sprites/1up.bmp
 bmp2nes gfx/sprites/ready.bmp
 bmp2nes gfx/sprites/tanks/blank_tank.bmp
@@ -26,5 +26,6 @@ bmp2nes gfx/sprites/enemies/teck.bmp
 bmp2nes gfx/fill/teck.bmp
 bmp2nes gfx/sprites/enemies/cannopeller.bmp
 bmp2nes gfx/sprites/enemies/brown.bmp
+bmp2nes gfx/sprites/enemies/tank_csii.bmp
 asm6 main.asm mm6.nes
 @pause

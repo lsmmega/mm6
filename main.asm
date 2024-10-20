@@ -19,7 +19,7 @@ incbin gfx/sprites/tanks/e_tank.chr
 incbin gfx/sprites/capsules/large_life_capsule.chr
 incbin gfx/sprites/capsules/small_life_capsule.chr
 incbin gfx/sprites/capsules/large_weapon_capsule.chr
-incbin gfx/sprites/killed.chr
+incbin gfx/sprites/explosion.chr
 incbin gfx/sprites/1up.chr
 incbin gfx/sprites/ready.chr
 incbin gfx/sprites/tanks/blank_tank.chr
