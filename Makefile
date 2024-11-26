@@ -2,6 +2,7 @@ rom_obj := \
 	audio.o  \
 	header.o \
 	home.o   \
+	stages.o \
 	bank00.o \
 	bank01.o \
 	bank02.o \
@@ -40,8 +41,6 @@ rom_obj := \
 	bank23.o \
 	bank24.o \
 	bank25.o \
-	bank26.o \
-	bank27.o \
 	bank28.o \
 	bank29.o \
 	bank2A.o \
@@ -52,8 +51,6 @@ rom_obj := \
 	bank2F.o \
 	bank30.o \
 	bank31.o \
-	bank32.o \
-	bank33.o \
 	bank37.o \
 	bank38.o \
 	bank39.o \
