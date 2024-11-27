@@ -4,11 +4,7 @@ rom_obj := \
 	header.o \
 	home.o   \
 	stages.o \
-	bank0B.o \
-	bank0C.o \
-	bank0D.o \
-	bank0E.o \
-	bank0F.o \
+	unused.o \
 	bank20.o \
 	bank21.o \
 	bank22.o \
