@@ -1,33 +1,12 @@
 rom_obj := \
 	audio.o  \
+	data.o   \
 	gfx.o    \
 	header.o \
 	home.o   \
+	main.o   \
 	stages.o \
-	unused.o \
-	bank20.o \
-	bank21.o \
-	bank22.o \
-	bank23.o \
-	bank24.o \
-	bank25.o \
-	bank28.o \
-	bank29.o \
-	bank2A.o \
-	bank2B.o \
-	bank2C.o \
-	bank2D.o \
-	bank2E.o \
-	bank2F.o \
-	bank30.o \
-	bank31.o \
-	bank37.o \
-	bank38.o \
-	bank39.o \
-	bank3A.o \
-	bank3B.o \
-	bank3C.o \
-	bank3D.o
+	unused.o
 
 mm6_obj := $(rom_obj:.o=.o)
 
