@@ -23,8 +23,9 @@ mm6.nes: $(mm6_obj) \
 	ca65 -o $@ $<
 
 %.nes: $(rom_obj)
-	ld65 $(rom_obj) -C mm6.cfg -o $@
+	ld65 -C mm6.cfg $(rom_obj) -o $@ -m mm6.map
 
 clean:
 	$(RM) $(rom_obj) \
+	mm6.map \
 	mm6.nes
