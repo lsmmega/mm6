@@ -1,2 +1,2 @@
 .SEGMENT "BANK11"
-.INCBIN "17/17.bin"
+.INCBIN "gfx/17/17.chr"

@@ -1,2 +1,2 @@
 .SEGMENT "BANK1E"
-.INCBIN "30/30.bin"
+.INCBIN "gfx/30/30.chr"
