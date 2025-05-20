@@ -68,8 +68,8 @@ cfg := \
 	mm6.cfg
 
 header := \
-	header.asm \
-	header/*
+	constants/* \
+	header.asm
 
 0 := \
 	0.asm \
