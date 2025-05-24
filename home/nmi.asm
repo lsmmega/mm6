@@ -1,1 +1,184 @@
-;NMI:
+NMI:
+	.ORG $C000
+
+label_9
+	PHA
+label_10
+	TXA
+	PHA
+	TYA
+	PHA
+	LDA $F2
+	BEQ label_1
+	LDA $FD
+	BNE label_2
+	JMP label_3
+label_2
+	JMP label_4
+label_1
+	LDA $FC
+	AND #$78
+	STA $2000
+	LDA #$00
+	STA $2001
+	LDA $FB
+	STA $A000
+	LDA #$00
+	STA $2003
+	LDA #$02
+	STA $4014
+	LDA $60
+	BNE label_5
+	LDA $47
+	BNE label_6
+	LDA $46
+	BNE label_7
+	JSR $C79C
+	JMP label_8
+label_7
+	JSR $C69E
+label_6
+	JSR $C6D7
+label_5
+	JSR $C7DE
+label_8
+	LDA $2002
+	LDA $F7
+	CLC
+	ADC $069D
+	STA $06A7
+	STA $2005
+	LDA $57
+	STA $06A8
+	LDA $F9
+	CLC
+	ADC $069C
+	STA $2005
+	LDA $0677
+	STA $0676
+	LDA $0672
+	STA label_9
+	STA label_10
+	LDY $F4
+	STA $E000,Y
+	LDA $FD
+	AND #$F9
+	STA $2001
+	LDA $FA
+	AND #$01
+	ASL
+	ORA $FC
+	ORA $F8
+	STA $2000
+	INC $F3
+	LDX #$03
+label_12
+	LDA $21,X
+	CMP #$01
+	BNE label_11
+	DEC $25,X
+	BNE label_11
+	LDA #$04
+	STA $21,X
+label_11
+	DEX
+	BPL label_12
+	LDA #$88
+	STA $F2
+	JSR $C711
+label_3
+	LDA $F4
+	BEQ label_13
+	LDA $0672
+	CMP #$70
+	BCC label_14
+label_13
+	JSR $C8C1
+label_14
+	JSR $C88D
+	PLA
+	TAY
+	PLA
+	TAX
+	PLA
+	RTI
+label_4
+	LDA $F4
+	BEQ label_15
+	LDA $0677
+	STA $0676
+	LDA $0672
+	STA label_9
+	STA label_10
+	LDY $F4
+	STA $E000,Y
+	LDA $2002
+	LDA $F7
+	CLC
+	ADC $069D
+	STA $06A7
+	STA $2005
+	LDA $57
+	STA $06A8
+	LDA $F9
+	CLC
+	ADC $069C
+	STA $2005
+label_15
+	LDA $FA
+	AND #$01
+	ASL
+label_18
+	ORA $FC
+	ORA $F8
+	STA $2000
+	JMP label_3
+	LDA $0676
+	ASL
+	TAX
+	LDA label_16,X
+	STA $1D
+	LDA label_17,X
+	STA $1E
+	JMP ($001D)
+label_16
+	.HEX 67
+label_17
+	CMP ($8C,X)
+	CMP ($AB,X)
+	CMP ($DB,X)
+	CMP ($FB,X)
+	CMP ($18,X)
+	.HEX C2
+	AND #$C2
+	.HEX 3A
+	.HEX C2
+	CLI
+	.HEX C2
+	.HEX 7A
+	.HEX C2
+	TAY
+	.HEX C2
+	LDX $D7C2,Y
+	.HEX C2
+	BEQ $C0F4
+	.HEX FF
+	.HEX C2
+	.HEX 1B
+	.HEX C3
+	BEQ label_18
+	.HEX 37
+	.HEX C3
+	CLV
+	.HEX C3
+	CLV
+	.HEX C3
+	CLD
+	.HEX C3
+	.HEX 53
+	CPY $75
+	CPY $8F
+	CPY $A3
+	CPY $B2
+	CPY $F2
+	CPY $48
