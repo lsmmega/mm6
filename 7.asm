@@ -1,2 +1,2 @@
 .SEGMENT "BANK07"
-.INCBIN "gfx/7/7.chr"
+.INCBIN  "gfx/7/7.chr"

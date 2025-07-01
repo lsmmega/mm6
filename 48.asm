@@ -1,2 +1,2 @@
 .SEGMENT "BANK30"
-.INCBIN "48/48.bin"
+.INCBIN  "48/48.bin"

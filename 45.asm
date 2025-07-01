@@ -1,2 +1,2 @@
 .SEGMENT "BANK2D"
-.INCBIN "45/45.bin"
+.INCBIN  "45/45.bin"
