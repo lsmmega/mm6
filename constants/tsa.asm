@@ -1,0 +1,18 @@
+.ENUM
+	background
+	wall
+	unused_02
+	laddertop
+	ladder
+	ice
+	foreground
+	fg_wall
+	water
+	fg_muddy
+	unused_0a
+	unused_0b
+	unused_0c
+	unused_0d
+	unused_0e
+	spikes
+.ENDENUM
