@@ -1,2 +1,5 @@
 .SEGMENT "BANK2D"
+.INCLUDE "constants/tsa.asm"
+.INCLUDE "45/knight_tsa.asm"
+.INCLUDE "45/centaur_tsa.asm"
 .INCBIN  "45/45.bin"
