@@ -1,2 +1,6 @@
 .SEGMENT "BANK2E"
+.INCLUDE "constants/tsa.asm"
+.INCLUDE "46/blizzard_tsa.asm"
+.INCLUDE "46/yamato_tsa.asm"
+.INCLUDE "46/plant_tsa.asm"
 .INCBIN  "46/46.bin"
