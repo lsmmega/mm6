@@ -1,4 +1,5 @@
 rom_obj := \
+	audio.o \
 	header.o \
 	home.o \
 	0.o \
@@ -53,9 +54,6 @@ rom_obj := \
 	49.o \
 	50.o \
 	51.o \
-	52.o \
-	53.o \
-	54.o \
 	55.o \
 	56.o \
 	57.o \
@@ -66,6 +64,12 @@ rom_obj := \
 
 cfg := \
 	mm6.cfg
+
+audio := \
+	audio.asm \
+	constants/* \
+	macros/* \
+	audio/*
 
 header := \
 	constants/* \
@@ -289,18 +293,6 @@ home := \
 	51.asm \
 	51/*
 
-52 := \
-	52.asm \
-	52/*
-
-53 := \
-	53.asm \
-	53/*
-
-54 := \
-	54.asm \
-	54/*
-
 55 := \
 	55.asm \
 	55/*
@@ -432,6 +424,9 @@ mm6: mm6.nes
 
 %.nes: $(rom_obj) $(cfg)
 	ld65 -C $(cfg) $(rom_obj) -o $@ -m $*.map
+
+audio.o: $(audio)
+	ca65 audio.asm
 
 header.o: $(header)
 	ca65 header.asm
@@ -626,15 +621,6 @@ home.o: $(home)
 
 51.o: $(51)
 	ca65 51.asm
-
-52.o: $(52)
-	ca65 52.asm
-
-53.o: $(53)
-	ca65 53.asm
-
-54.o: $(54)
-	ca65 54.asm
 
 55.o: $(55)
 	ca65 55.asm
