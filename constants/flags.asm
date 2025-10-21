@@ -1,13 +1,13 @@
-;beat letter flags.
+;beat letter flags
 	got_letter_b = 1 << 2
 	got_letter_e = 1 << 2
 	got_letter_a = 1 << 2
 	got_letter_t = 1 << 2
 
-;energy balancer.
+;energy balancer
 	got_energy_balancer = 1
 
-;rematch flags.
+;rematch flags
 	rematch_blizzardman_done = 1 << 0
 	rematch_windman_done     = 1 << 1
 	rematch_plantman_done    = 1 << 2
@@ -17,7 +17,7 @@
 	rematch_knightman_done   = 1 << 6
 	rematch_centaurman_done  = 1 << 7
 
-;regular stage clear flags.
+;regular stage clear flags
 	stage_blizzardman_clear = 1 << 0
 	stage_windman_clear     = 1 << 0
 	stage_plantman_clear    = 1 << 0
