@@ -6,4 +6,5 @@
 .INCBIN  "audio/instruments.bin"
 .INCLUDE "audio/music/windman.asm"
 .INCLUDE "audio/music/blizzardman.asm"
+.INCLUDE "audio/music/yamatoman.asm"
 .INCBIN  "audio/audio.bin"
