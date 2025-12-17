@@ -14,4 +14,5 @@
 .INCLUDE "audio/music/knightman.asm"
 .INCLUDE "audio/music/ending.asm"
 .INCLUDE "audio/music/x.asm"
+.INCLUDE "audio/music/staff_roll.asm"
 .INCBIN  "audio/audio.bin"
