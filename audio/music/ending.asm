@@ -1,14 +1,14 @@
-music_ending_intro:
+music_ending:
 	music_header
-	.DBYT music_ending_intro_pulse_1
-	.DBYT music_ending_intro_pulse_2
-	.DBYT music_ending_intro_triangle
-	.DBYT music_ending_intro_noise
+	.DBYT music_ending_pulse_1
+	.DBYT music_ending_pulse_2
+	.DBYT music_ending_triangle
+	.DBYT music_ending_noise
 
 ;reset
 	current_global_transpose .SET 0
 
-music_ending_intro_pulse_1:
+music_ending_pulse_1:
 	current_octave_jump .SET 0
 	current_octave .SET 0
 	current_channel_transpose .SET 0
@@ -48,7 +48,7 @@ music_ending_intro_pulse_1:
 	note F_3, 16
 	music_end
 
-music_ending_intro_pulse_2:
+music_ending_pulse_2:
 	current_octave_jump .SET 0
 	current_octave .SET 0
 	current_channel_transpose .SET 0
@@ -89,7 +89,7 @@ music_ending_intro_pulse_2:
 	note A_2, 8
 	music_end
 
-music_ending_intro_triangle:
+music_ending_triangle:
 	current_octave_jump .SET 0
 	current_octave .SET 0
 	current_channel_transpose .SET 0
@@ -126,7 +126,7 @@ music_ending_intro_triangle:
 	note A_3, 8
 	music_end
 
-music_ending_intro_noise:
+music_ending_noise:
 	note_ads $5A
 	instrument 0
 	volume 12
