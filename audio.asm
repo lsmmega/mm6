@@ -33,4 +33,5 @@
 .INCLUDE "audio/music/nothing.asm"
 .INCLUDE "audio/music/ending_blizzardman.asm"
 .INCLUDE "audio/music/ending_centaurman.asm"
+.INCLUDE "audio/music/ending_flameman.asm"
 .INCBIN  "audio/audio.bin"
