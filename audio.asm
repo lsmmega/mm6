@@ -30,4 +30,5 @@
 .INCLUDE "audio/music/wily_defeated.asm"
 .INCLUDE "audio/music/wily_fighting.asm"
 .INCLUDE "audio/music/title.asm"
+.INCLUDE "audio/music/nothing.asm"
 .INCBIN  "audio/audio.bin"
