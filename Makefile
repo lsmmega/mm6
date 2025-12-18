@@ -2,6 +2,7 @@ rom_obj := \
 	audio.o \
 	header.o \
 	home.o \
+	stages.o \
 	0.o \
 	1.o \
 	2.o \
@@ -44,12 +45,6 @@ rom_obj := \
 	39.o \
 	40.o \
 	41.o \
-	42.o \
-	43.o \
-	44.o \
-	45.o \
-	46.o \
-	47.o \
 	48.o \
 	49.o \
 	50.o \
@@ -79,6 +74,27 @@ header := \
 home := \
 	home.asm \
 	home/*
+
+stages := \
+	stages.asm \
+	constants/* \
+	stages/wily1/* \
+	stages/wily2/* \
+	stages/wily3/* \
+	stages/* \
+	stages/x4/* \
+	stages/wily4/* \
+	stages/windman/* \
+	stages/tomahawkman/* \
+	stages/x1/* \
+	stages/knightman/* \
+	stages/centaurman/* \
+	stages/blizzardman/* \
+	stages/yamatoman/* \
+	stages/plantman/* \
+	stages/flameman/* \
+	stages/x2/* \
+	stages/x3/*
 
 0 := \
 	0.asm \
@@ -248,36 +264,6 @@ home := \
 	41.asm \
 	41/*
 
-42 := \
-	constants/* \
-	42.asm \
-	42/*
-
-43 := \
-	constants/* \
-	43.asm \
-	43/*
-
-44 := \
-	constants/* \
-	44.asm \
-	44/*
-
-45 := \
-	constants/* \
-	45.asm \
-	45/*
-
-46 := \
-	constants/* \
-	46.asm \
-	46/*
-
-47 := \
-	constants/* \
-	47.asm \
-	47/*
-
 48 := \
 	48.asm \
 	48/*
@@ -434,6 +420,9 @@ header.o: $(header)
 
 home.o: $(home)
 	ca65 home.asm
+
+stages.o: $(stages)
+	ca65 stages.asm
 
 0.o: $(0)
 	bmp2nes $(gfx0)
@@ -592,24 +581,6 @@ home.o: $(home)
 
 41.o: $(41)
 	ca65 41.asm
-
-42.o: $(42)
-	ca65 42.asm
-
-43.o: $(43)
-	ca65 43.asm
-
-44.o: $(44)
-	ca65 44.asm
-
-45.o: $(45)
-	ca65 45.asm
-
-46.o: $(46)
-	ca65 46.asm
-
-47.o: $(47)
-	ca65 47.asm
 
 48.o: $(48)
 	ca65 48.asm

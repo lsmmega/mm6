@@ -1,6 +1,0 @@
-.SEGMENT "BANK2C"
-.INCLUDE "constants/tsa.asm"
-.INCLUDE "44/wind_tsa.asm"
-.INCLUDE "44/tomahawk_tsa.asm"
-.INCLUDE "44/mr_x1_tsa.asm"
-.INCBIN  "44/44.bin"
