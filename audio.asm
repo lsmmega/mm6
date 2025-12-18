@@ -29,4 +29,5 @@
 .INCLUDE "audio/music/get_weapon.asm"
 .INCLUDE "audio/music/wily_defeated.asm"
 .INCLUDE "audio/music/wily_fighting.asm"
+.INCLUDE "audio/music/title.asm"
 .INCBIN  "audio/audio.bin"
