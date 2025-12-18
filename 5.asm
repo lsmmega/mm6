@@ -1,2 +1,0 @@
-.SEGMENT "BANK05"
-.INCBIN  "gfx/5/5.chr"

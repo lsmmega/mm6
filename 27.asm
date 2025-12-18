@@ -1,2 +1,0 @@
-.SEGMENT "BANK1B"
-.INCBIN  "gfx/27/27.chr"

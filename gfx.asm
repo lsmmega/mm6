@@ -1,0 +1,95 @@
+.SEGMENT "BANK00"
+.INCBIN  "gfx/0/0.chr"
+
+.SEGMENT "BANK01"
+.INCBIN  "gfx/1/1.chr"
+
+.SEGMENT "BANK02"
+.INCBIN  "gfx/2/2.chr"
+
+.SEGMENT "BANK03"
+.INCBIN  "gfx/3/3.chr"
+
+.SEGMENT "BANK04"
+.INCBIN  "gfx/4/4.chr"
+
+.SEGMENT "BANK05"
+.INCBIN  "gfx/5/5.chr"
+
+.SEGMENT "BANK06"
+.INCBIN  "gfx/6/6.chr"
+
+.SEGMENT "BANK07"
+.INCBIN  "gfx/7/7.chr"
+
+.SEGMENT "BANK08"
+.INCBIN  "gfx/8/8.chr"
+
+.SEGMENT "BANK09"
+.INCBIN  "gfx/9/9.chr"
+
+.SEGMENT "BANK0A"
+.INCBIN  "gfx/10/10.chr"
+
+.SEGMENT "BANK0B"
+.INCBIN  "gfx/11/11.chr"
+
+.SEGMENT "BANK0C"
+.INCBIN  "gfx/12/12.chr"
+
+.SEGMENT "BANK0D"
+.INCBIN  "gfx/13/13.chr"
+
+.SEGMENT "BANK0E"
+.INCBIN  "gfx/14/14.chr"
+
+.SEGMENT "BANK0F"
+.INCBIN  "gfx/15/15.chr"
+
+.SEGMENT "BANK10"
+.INCBIN  "gfx/16/16.chr"
+
+.SEGMENT "BANK11"
+.INCBIN  "gfx/17/17.chr"
+
+.SEGMENT "BANK12"
+.INCBIN  "gfx/18/18.chr"
+
+.SEGMENT "BANK13"
+.INCBIN  "gfx/19/19.chr"
+
+.SEGMENT "BANK14"
+.INCBIN  "gfx/20/20.chr"
+
+.SEGMENT "BANK15"
+.INCBIN  "gfx/21/21.chr"
+
+.SEGMENT "BANK16"
+.INCBIN  "gfx/22/22.chr"
+
+.SEGMENT "BANK17"
+.INCBIN  "gfx/23/23.chr"
+
+.SEGMENT "BANK18"
+.INCBIN  "gfx/24/24.chr"
+
+.SEGMENT "BANK19"
+.INCBIN  "gfx/25/25.chr"
+
+.SEGMENT "BANK1A"
+.INCBIN  "gfx/26/26.chr"
+
+.SEGMENT "BANK1B"
+.INCBIN  "gfx/27/27.chr"
+
+.SEGMENT "BANK1C"
+.INCBIN  "gfx/28/28.chr"
+
+.SEGMENT "BANK1D"
+.INCBIN  "gfx/29/29.chr"
+
+.SEGMENT "BANK1E"
+.INCBIN  "gfx/30/30.chr"
+
+.SEGMENT "BANK1F"
+.INCBIN  "gfx/31/31.chr"
