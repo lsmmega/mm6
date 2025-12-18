@@ -36,4 +36,5 @@
 .INCLUDE "audio/music/ending_flameman.asm"
 .INCLUDE "audio/music/ending_knightman.asm"
 .INCLUDE "audio/music/ending_plantman.asm"
+.INCLUDE "audio/music/ending_tomahawkman.asm"
 .INCBIN  "audio/audio.bin"
