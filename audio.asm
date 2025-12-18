@@ -21,4 +21,5 @@
 .INCLUDE "audio/music/capcom.asm"
 .INCLUDE "audio/music/stage_select.asm"
 .INCLUDE "audio/music/boss_show.asm"
+.INCLUDE "audio/music/x_castle.asm"
 .INCBIN  "audio/audio.bin"
