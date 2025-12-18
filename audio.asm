@@ -20,4 +20,5 @@
 .INCLUDE "audio/music/opening.asm"
 .INCLUDE "audio/music/capcom.asm"
 .INCLUDE "audio/music/stage_select.asm"
+.INCLUDE "audio/music/boss_show.asm"
 .INCBIN  "audio/audio.bin"
