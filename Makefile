@@ -5,14 +5,10 @@ rom_obj := \
 	home.o \
 	sprites.o \
 	stages.o \
-	38.o \
-	39.o \
 	40.o \
 	41.o \
 	48.o \
 	49.o \
-	50.o \
-	51.o \
 	55.o \
 	56.o \
 	57.o \
@@ -81,10 +77,10 @@ sprites := \
 stages := \
 	stages.asm \
 	constants/* \
+	stages/* \
 	stages/wily1/* \
 	stages/wily2/* \
 	stages/wily3/* \
-	stages/* \
 	stages/x4/* \
 	stages/wily4/* \
 	stages/windman/* \
@@ -98,14 +94,6 @@ stages := \
 	stages/flameman/* \
 	stages/x2/* \
 	stages/x3/*
-
-38 := \
-	38.asm \
-	38/*
-
-39 := \
-	39.asm \
-	39/*
 
 40 := \
 	40.asm \
@@ -122,14 +110,6 @@ stages := \
 49 := \
 	49.asm \
 	49/*
-
-50 := \
-	50.asm \
-	50/*
-
-51 := \
-	51.asm \
-	51/*
 
 55 := \
 	55.asm \
@@ -220,12 +200,6 @@ sprites.o: $(sprites)
 stages.o: $(stages)
 	ca65 stages.asm
 
-38.o: $(38)
-	ca65 38.asm
-
-39.o: $(39)
-	ca65 39.asm
-
 40.o: $(40)
 	ca65 40.asm
 
@@ -237,12 +211,6 @@ stages.o: $(stages)
 
 49.o: $(49)
 	ca65 49.asm
-
-50.o: $(50)
-	ca65 50.asm
-
-51.o: $(51)
-	ca65 51.asm
 
 55.o: $(55)
 	ca65 55.asm
