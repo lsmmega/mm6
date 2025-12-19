@@ -4,6 +4,9 @@
 .SEGMENT "BANK27"
 .INCBIN  "stages/mapset_39.bin"
 
+.SEGMENT "BANK28"
+.INCBIN  "stages/palettes_40.bin"
+
 .SEGMENT "BANK2A"
 .INCLUDE "constants/tsa.asm"
 .INCLUDE "stages/wily1/wily1_tsa.asm"
@@ -44,3 +47,6 @@
 
 .SEGMENT "BANK33"
 .INCBIN  "stages/mapset_51.bin"
+
+.SEGMENT "BANK37"
+.INCBIN  "stages/palettes_55.bin"

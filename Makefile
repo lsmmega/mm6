@@ -5,11 +5,9 @@ rom_obj := \
 	home.o \
 	sprites.o \
 	stages.o \
-	40.o \
 	41.o \
 	48.o \
 	49.o \
-	55.o \
 	56.o \
 	57.o \
 	58.o \
@@ -95,10 +93,6 @@ stages := \
 	stages/x2/* \
 	stages/x3/*
 
-40 := \
-	40.asm \
-	40/*
-
 41 := \
 	41.asm \
 	41/*
@@ -110,10 +104,6 @@ stages := \
 49 := \
 	49.asm \
 	49/*
-
-55 := \
-	55.asm \
-	55/*
 
 56 := \
 	56.asm \
@@ -200,9 +190,6 @@ sprites.o: $(sprites)
 stages.o: $(stages)
 	ca65 stages.asm
 
-40.o: $(40)
-	ca65 40.asm
-
 41.o: $(41)
 	ca65 41.asm
 
@@ -211,9 +198,6 @@ stages.o: $(stages)
 
 49.o: $(49)
 	ca65 49.asm
-
-55.o: $(55)
-	ca65 55.asm
 
 56.o: $(56)
 	ca65 56.asm
