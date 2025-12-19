@@ -3,10 +3,8 @@ rom_obj := \
 	gfx.o \
 	header.o \
 	home.o \
+	sprites.o \
 	stages.o \
-	32.o \
-	34.o \
-	36.o \
 	38.o \
 	39.o \
 	40.o \
@@ -76,6 +74,10 @@ home := \
 	home.asm \
 	home/*
 
+sprites := \
+	sprites.asm \
+	sprites/*
+
 stages := \
 	stages.asm \
 	constants/* \
@@ -96,18 +98,6 @@ stages := \
 	stages/flameman/* \
 	stages/x2/* \
 	stages/x3/*
-
-32 := \
-	32.asm \
-	32/*
-
-34 := \
-	34.asm \
-	34/*
-
-36 := \
-	36.asm \
-	36/*
 
 38 := \
 	38.asm \
@@ -224,17 +214,11 @@ header.o: $(header)
 home.o: $(home)
 	ca65 home.asm
 
+sprites.o: $(sprites)
+	ca65 sprites.asm
+
 stages.o: $(stages)
 	ca65 stages.asm
-
-32.o: $(32)
-	ca65 32.asm
-
-34.o: $(34)
-	ca65 34.asm
-
-36.o: $(36)
-	ca65 36.asm
 
 38.o: $(38)
 	ca65 38.asm
