@@ -1,8 +1,14 @@
 .SEGMENT "BANK26"
-.INCBIN  "stages/mapset_38.bin"
+.INCLUDE "stages/x1/x1_mapset.asm"
+.INCLUDE "stages/x2/x2_mapset.asm"
+.INCLUDE "stages/x3/x3_mapset.asm"
+.INCLUDE "stages/x4/x4_mapset.asm"
 
 .SEGMENT "BANK27"
-.INCBIN  "stages/mapset_39.bin"
+.INCLUDE "stages/wily1/wily1_mapset.asm"
+.INCLUDE "stages/wily2/wily2_mapset.asm"
+.INCLUDE "stages/wily3/wily3_mapset.asm"
+.INCLUDE "stages/wily4/wily4_mapset.asm"
 
 .SEGMENT "BANK28"
 .INCBIN  "stages/palettes_40.bin"
@@ -43,10 +49,16 @@
 .INCBIN  "stages/47.bin"
 
 .SEGMENT "BANK32"
-.INCBIN  "stages/mapset_50.bin"
+.INCLUDE "stages/blizzardman/blizzardman_mapset.asm"
+.INCLUDE "stages/windman/windman_mapset.asm"
+.INCLUDE "stages/plantman/plantman_mapset.asm"
+.INCLUDE "stages/flameman/flameman_mapset.asm"
 
 .SEGMENT "BANK33"
-.INCBIN  "stages/mapset_51.bin"
+.INCLUDE "stages/yamatoman/yamatoman_mapset.asm"
+.INCLUDE "stages/tomahawkman/tomahawkman_mapset.asm"
+.INCLUDE "stages/knightman/knightman_mapset.asm"
+.INCLUDE "stages/centaurman/centaurman_mapset.asm"
 
 .SEGMENT "BANK37"
 .INCBIN  "stages/palettes_55.bin"
