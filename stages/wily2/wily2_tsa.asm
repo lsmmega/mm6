@@ -1,3 +1,4 @@
+;16x16
 ;topleft
 	.BYTE $00 ;00
 	.BYTE $22 ;01
@@ -1288,7 +1289,7 @@
 	.BYTE background << 4 | 0 ;FE
 	.BYTE background << 4 | 3 ;FF
 
-	;     topleft, topright, bottomleft, bottomright
+;32x32, topleft, topright, bottomleft, bottomright
 	.BYTE $04, $05, $05, $07 ;00
 	.BYTE $06, $04, $04, $05 ;01
 	.BYTE $05, $06, $07, $04 ;02

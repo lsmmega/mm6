@@ -1,3 +1,4 @@
+;16x16
 ;topleft
 	.BYTE $04 ;00
 	.BYTE $4E ;01
@@ -1288,7 +1289,7 @@
 	.BYTE fg_wall << 4    | 2 ;FE
 	.BYTE background << 4 | 3 ;FF
 
-	;     topleft, topright, bottomleft, bottomright
+;32x32, topleft, topright, bottomleft, bottomright
 	.BYTE $80, $81, $88, $87 ;00
 	.BYTE $82, $80, $87, $88 ;01
 	.BYTE $22, $22, $22, $22 ;02
