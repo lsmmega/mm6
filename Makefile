@@ -23,7 +23,8 @@ audio := \
 	constants/* \
 	macros/* \
 	audio/* \
-	audio/music/*
+	audio/music/* \
+	audio/unused/*
 
 gfx := \
 	gfx.asm \

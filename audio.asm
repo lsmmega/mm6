@@ -42,3 +42,4 @@
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/protoman_whistle.asm"
 .INCBIN  "audio/audio_1.bin"
+.INCLUDE "audio/unused/unused.asm"
