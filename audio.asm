@@ -44,6 +44,7 @@
 .INCLUDE "audio/sfx/megaman_hit.asm"
 .INCLUDE "audio/sfx/death.asm"
 .INCLUDE "audio/sfx/enemy_immune.asm"
+.INCLUDE "audio/sfx/sfx_28.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/protoman_whistle.asm"
 .INCBIN  "audio/audio_1.bin"
