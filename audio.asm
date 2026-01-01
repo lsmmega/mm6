@@ -85,5 +85,6 @@
 .INCLUDE "audio/sfx/count_bomb.asm"
 .INCLUDE "audio/sfx/fan.asm"
 .INCLUDE "audio/sfx/oil.asm"
+.INCLUDE "audio/sfx/sfx_51.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
