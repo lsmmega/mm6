@@ -91,5 +91,6 @@
 .INCLUDE "audio/sfx/spring.asm"
 .INCLUDE "audio/sfx/spike_ceiling_up.asm"
 .INCLUDE "audio/sfx/spike_ceiling_down.asm"
+.INCLUDE "audio/sfx/spike_ceiling_end.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
