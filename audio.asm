@@ -69,5 +69,6 @@
 .INCLUDE "audio/sfx/power_adapter_destroy_ice.asm"
 .INCLUDE "audio/sfx/sfx_3f.asm"
 .INCLUDE "audio/sfx/submarine_up.asm"
+.INCLUDE "audio/sfx/submarine_down.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
