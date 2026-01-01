@@ -71,5 +71,6 @@
 .INCLUDE "audio/sfx/submarine_up.asm"
 .INCLUDE "audio/sfx/submarine_down.asm"
 .INCLUDE "audio/sfx/enemy_bullet.asm"
+.INCLUDE "audio/sfx/brown.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
