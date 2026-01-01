@@ -1,4 +1,4 @@
-sfx_blast:
+sfx_colton:
 	sfx_priority 7
 
 ;1
