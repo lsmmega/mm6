@@ -76,5 +76,6 @@
 .INCLUDE "audio/sfx/fire_telly.asm"
 .INCLUDE "audio/sfx/teck.asm"
 .INCLUDE "audio/sfx/curlinger.asm"
+.INCLUDE "audio/sfx/heli_buton.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
