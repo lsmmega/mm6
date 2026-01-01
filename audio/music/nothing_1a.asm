@@ -1,4 +1,4 @@
-music_nothing:
+music_nothing_1a:
 	music_header
 	.DBYT music_nothing_pulse_1
 	.DBYT music_nothing_pulse_2

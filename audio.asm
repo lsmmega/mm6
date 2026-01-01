@@ -30,7 +30,7 @@
 .INCLUDE "audio/music/wily_defeated.asm"
 .INCLUDE "audio/music/wily_fighting.asm"
 .INCLUDE "audio/music/title.asm"
-.INCLUDE "audio/music/nothing.asm"
+.INCLUDE "audio/music/nothing_1a.asm"
 .INCLUDE "audio/music/ending_blizzardman.asm"
 .INCLUDE "audio/music/ending_centaurman.asm"
 .INCLUDE "audio/music/ending_flameman.asm"
