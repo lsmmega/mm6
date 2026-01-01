@@ -79,5 +79,6 @@
 .INCLUDE "audio/sfx/heli_buton.asm"
 .INCLUDE "audio/sfx/power_slam_up.asm"
 .INCLUDE "audio/sfx/power_slam_down.asm"
+.INCLUDE "audio/sfx/power_slam_landing.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
