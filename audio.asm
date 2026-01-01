@@ -88,5 +88,6 @@
 .INCLUDE "audio/sfx/sfx_51.asm"
 .INCLUDE "audio/sfx/flameman_fire_pillar.asm"
 .INCLUDE "audio/sfx/heli_buton_appear.asm"
+.INCLUDE "audio/sfx/spring.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
