@@ -1,4 +1,4 @@
-sfx_power_adapter_full_charge_shot:
+sfx_power_adapter_destroy_block:
 	sfx_priority 8
 
 ;1

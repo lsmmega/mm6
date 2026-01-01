@@ -48,7 +48,7 @@
 .INCLUDE "audio/sfx/charge_shot_full_charging.asm"
 .INCLUDE "audio/sfx/adapter.asm"
 .INCLUDE "audio/sfx/power_adapter_half_charge_shot.asm"
-.INCLUDE "audio/sfx/power_adapter_full_charge_shot.asm"
+.INCLUDE "audio/sfx/power_adapter_destroy_block.asm"
 .INCLUDE "audio/sfx/jet.asm"
 .INCLUDE "audio/sfx/beat.asm"
 .INCLUDE "audio/sfx/1up.asm"
