@@ -50,6 +50,7 @@
 .INCLUDE "audio/sfx/power_adapter_half_charge_shot.asm"
 .INCLUDE "audio/sfx/power_adapter_full_charge_shot.asm"
 .INCLUDE "audio/sfx/jet.asm"
+.INCLUDE "audio/sfx/beat.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/protoman_whistle.asm"
 .INCBIN  "audio/audio_1.bin"
