@@ -62,5 +62,6 @@
 .INCLUDE "audio/sfx/teleport_in.asm"
 .INCLUDE "audio/sfx/error.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
+.INCLUDE "audio/sfx/teleport_out.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
