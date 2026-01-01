@@ -52,6 +52,7 @@
 .INCLUDE "audio/sfx/jet.asm"
 .INCLUDE "audio/sfx/beat.asm"
 .INCLUDE "audio/sfx/1up.asm"
+.INCLUDE "audio/sfx/door.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/protoman_whistle.asm"
 .INCBIN  "audio/audio_1.bin"
