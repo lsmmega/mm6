@@ -83,5 +83,6 @@
 .INCLUDE "audio/sfx/batabattan_landing.asm"
 .INCLUDE "audio/sfx/sfx_4d.asm"
 .INCLUDE "audio/sfx/count_bomb.asm"
+.INCLUDE "audio/sfx/fan.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
