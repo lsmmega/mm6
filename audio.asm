@@ -101,5 +101,6 @@
 .INCLUDE "audio/sfx/centaurman_running.asm"
 .INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCLUDE "audio/sfx/wily_machine_6_stomp.asm"
+.INCLUDE "audio/sfx/lighting.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
