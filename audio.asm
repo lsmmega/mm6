@@ -104,5 +104,6 @@
 .INCLUDE "audio/sfx/lighting.asm"
 .INCLUDE "audio/sfx/route.asm"
 .INCLUDE "audio/sfx/wily_ufo.asm"
+.INCLUDE "audio/sfx/sfx_64.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"

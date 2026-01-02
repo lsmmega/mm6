@@ -25,8 +25,7 @@ sfx_wily_ufo_loop_1:
 	sfx_note Eb6
 
 ;2
-	sfx_global_channel_flags sfx_ads_set
-	sfx_ads $FF
+	sfx_global_channel_flags no_channel_flags_set
 	sfx_frames 10
 	.BYTE sfx_pulse_2 | sfx_triangle
 
