@@ -99,5 +99,6 @@
 .INCLUDE "audio/sfx/centaurman_disappear.asm"
 .INCLUDE "audio/sfx/centaurman_appear.asm"
 .INCLUDE "audio/sfx/centaurman_running.asm"
+.INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
