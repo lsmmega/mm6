@@ -96,5 +96,6 @@
 .INCLUDE "audio/sfx/blizzard_attack.asm"
 .INCLUDE "audio/sfx/blizzardman_rolling.asm"
 .INCLUDE "audio/sfx/blizzardman_rollout.asm"
+.INCLUDE "audio/sfx/centaurman_disappear.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/unused/unused.asm"
