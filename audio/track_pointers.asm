@@ -101,3 +101,4 @@ track_pointers:
 	.DBYT sfx_wily_ufo
 	.DBYT sfx_64
 	.DBYT sfx_get_weapon_blast
+track_pointers_end:
