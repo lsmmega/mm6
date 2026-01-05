@@ -72,7 +72,8 @@ home := \
 
 sprites := \
 	sprites.asm \
-	sprites/*
+	sprites/* \
+	sprites/unused/*
 
 stages := \
 	stages.asm \
@@ -83,6 +84,7 @@ stages := \
 	stages/wily3/* \
 	stages/x4/* \
 	stages/wily4/* \
+	stages/unused/* \
 	stages/windman/* \
 	stages/tomahawkman/* \
 	stages/x1/* \
@@ -97,15 +99,18 @@ stages := \
 
 41 := \
 	41.asm \
-	41/*
+	41/* \
+	unused/*
 
 48 := \
 	48.asm \
-	48/*
+	48/* \
+	unused/*
 
 49 := \
 	49.asm \
-	49/*
+	49/* \
+	unused/*
 
 56 := \
 	56.asm \
@@ -113,23 +118,28 @@ stages := \
 
 57 := \
 	57.asm \
-	57/*
+	57/* \
+	unused/*
 
 58 := \
 	58.asm \
-	58/*
+	58/* \
+	unused/*
 
 59 := \
 	59.asm \
-	59/*
+	59/* \
+	unused/*
 
 60 := \
 	60.asm \
-	60/*
+	60/* \
+	unused/*
 
 61 := \
 	61.asm \
-	61/*
+	61/* \
+	unused/*
 
 _gfx := \
 	gfx/0/0.bmp gfx/0/0.chr \

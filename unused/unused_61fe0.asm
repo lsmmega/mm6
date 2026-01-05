@@ -1,0 +1,6 @@
+	.BYTE $00, $00, $00, $00, $00, $00, $00, $00
+	.BYTE $00, $00, $00, $00, $00, $00, $00, $00
+	.BYTE $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+	.BYTE $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+	.BYTE $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+	.BYTE $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF

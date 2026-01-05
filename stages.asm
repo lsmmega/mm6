@@ -11,7 +11,10 @@
 .INCLUDE "stages/wily4/wily4_mapset.asm"
 
 .SEGMENT "BANK28"
-.INCBIN  "stages/palettes_40.bin"
+.INCBIN  "stages/palettes_40_0.bin"
+.INCLUDE "stages/unused/unused_50488.asm"
+.INCBIN  "stages/palettes_40_1.bin"
+.INCLUDE "stages/unused/unused_5189f.asm"
 
 .SEGMENT "BANK2A"
 .INCLUDE "constants/tsa.asm"
@@ -23,6 +26,7 @@
 .SEGMENT "BANK2B"
 .INCLUDE "stages/x4/x4_tsa.asm"
 .INCLUDE "stages/wily4/wily4_tsa.asm"
+.INCLUDE "stages/unused/unused_57210.asm"
 .INCBIN  "stages/43.bin"
 
 .SEGMENT "BANK2C"
@@ -34,6 +38,7 @@
 .SEGMENT "BANK2D"
 .INCLUDE "stages/knightman/knightman_tsa.asm"
 .INCLUDE "stages/centaurman/centaurman_tsa.asm"
+.INCLUDE "stages/unused/unused_5b210.asm"
 .INCBIN  "stages/45.bin"
 
 .SEGMENT "BANK2E"
@@ -61,4 +66,7 @@
 .INCLUDE "stages/centaurman/centaurman_mapset.asm"
 
 .SEGMENT "BANK37"
-.INCBIN  "stages/palettes_55.bin"
+.INCBIN  "stages/palettes_55_0.bin"
+.INCLUDE "stages/unused/unused_6e410.asm"
+.INCBIN  "stages/palettes_55_1.bin"
+.INCLUDE "stages/unused/unused_6f89f.asm"

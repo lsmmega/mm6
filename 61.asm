@@ -1,2 +1,5 @@
 .SEGMENT "BANK3D"
-.INCBIN  "61/61.bin"
+.INCBIN  "61/61_0.bin"
+.INCLUDE "unused/unused_7bb3d.asm"
+.INCBIN  "61/61_1.bin"
+.INCLUDE "unused/unused_7bf5e.asm"
