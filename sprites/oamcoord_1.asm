@@ -1,3 +1,4 @@
+;oamcoord, ycoord, xcoord, each 2 bytes
 oamcoord_000:
 	.FEATURE FORCE_RANGE
 	.BYTE -4, -4
