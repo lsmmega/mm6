@@ -72,6 +72,7 @@ home := \
 
 sprites := \
 	sprites.asm \
+	constants/* \
 	sprites/pointers/* \
 	sprites/* \
 	sprites/unused/*
