@@ -2772,5 +2772,3 @@ oamcoord_0fd:
 
 oamcoord_0fe:
 oamcoord_0ff:
-	.BYTE +0, +0
-	.BYTE +0, +0

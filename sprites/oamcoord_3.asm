@@ -2559,5 +2559,3 @@ oamcoord_28e:
 oamcoord_28f:
 	.BYTE -20, -4
 	.BYTE +12, -4
-	.BYTE  +0, +0
-	.BYTE  +0, +0
