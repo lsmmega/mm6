@@ -126,6 +126,7 @@ stages := \
 58 := \
 	58.asm \
 	58/* \
+	sprites/* \
 	unused/*
 
 59 := \

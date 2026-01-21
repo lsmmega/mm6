@@ -1,3 +1,5 @@
 .SEGMENT "BANK3A"
-.INCBIN  "58/58.bin"
+.INCBIN  "58/58_0.bin"
+.INCLUDE "sprites/bankswitch.asm"
+.INCBIN  "58/58_1.bin"
 .INCLUDE "unused/unused_755e4.asm"
