@@ -1,6 +1,5 @@
 ;oam sprites data
 ;@start length, oamcoord index, oam set
-
 oam_sprites_2000:
 	.BYTE (@end - @start) / 2 - 1
 	.BYTE $00
