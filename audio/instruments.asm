@@ -1,5 +1,5 @@
 ;attack, decay, sustain, release, invert_vibrato_rate, pitch_vibrato_rate, volume_vibrato_rate, noise_duty_cycle
-instrument_pointers:
+instrument_table_pointers:
 	.FEATURE FORCE_RANGE
 	instrument_set $1F, $1A, -6,  $14, $9E, 32,  38,  0 ;00
 	instrument_set $1F, $1F, -0,  $1F, $FF, 3,   0,   0 ;01

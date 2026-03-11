@@ -102,4 +102,12 @@
 	track_wily_ufo
 	track_64
 	track_get_weapon_blast
+	;init_audio         ;F0, F8
+	;init_sfx           ;F1, F9
+	;init_music         ;F2, FA
+	;pause_music        ;F3, FB
+	;play_music         ;F4, FC
+	;music_fade_in      ;F5, FD
+	;music_fade_out     ;F6, FE
+	;set_sfx_pitch_tune ;F7, FF
 .ENDENUM

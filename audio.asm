@@ -1,11 +1,11 @@
 .SEGMENT "BANK34"
 .INCLUDE "constants/audio.asm"
+.INCLUDE "constants/mmc3.asm"
+.INCLUDE "constants/nes.asm"
 .INCLUDE "macros/audio.asm"
-.INCBIN  "audio/engine.bin"
-
-	.BYTE (track_pointers_end - track_pointers) / 2
-	.DBYT instrument_pointers
-
+.INCLUDE "ram/ram.asm"
+.INCLUDE "audio/engine.asm"
+.INCLUDE "audio/unused/unused_68a32.asm"
 .INCLUDE "audio/track_pointers.asm"
 .INCLUDE "audio/instruments.asm"
 .INCLUDE "audio/music/windman.asm"
@@ -110,4 +110,4 @@
 .INCLUDE "audio/sfx/wily_ufo.asm"
 .INCLUDE "audio/sfx/sfx_64.asm"
 .INCLUDE "audio/sfx/get_weapon_blast.asm"
-.INCLUDE "audio/unused/unused.asm"
+.INCLUDE "audio/unused/unused_6df2c.asm"
