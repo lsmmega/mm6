@@ -23,6 +23,7 @@
 	zsfx_loop             = $D6
 	zsfx_repeat           = $D7
 	zsfx_pitch_tune       = $D8
+	ztrack_queue          = $DC
 
 	achannel_instrument        = $700
 	astats_adsr_state          = $704

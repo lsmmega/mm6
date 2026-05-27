@@ -371,3 +371,8 @@
 .MACRO sfx_end
 	.BYTE $FF
 .ENDMACRO
+
+.MACRO track_queue b
+	LDA #b
+	STA z:ztrack_queue
+.ENDMACRO
