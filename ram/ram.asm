@@ -1,3 +1,4 @@
+	zaudio_queue          = $B0
 	zplayback_flag        = $C0
 	zaudio_C1             = $C1
 	zaudio_C2             = $C2
@@ -23,6 +24,8 @@
 	zsfx_loop             = $D6
 	zsfx_repeat           = $D7
 	zsfx_pitch_tune       = $D8
+	zaudio_queue_index    = $D9
+	zaudio_queue_x        = $DA
 	ztrack_queue          = $DC
 
 	achannel_instrument        = $700
