@@ -35,6 +35,8 @@
 	zaudio_queue_index_undo = $DB
 	ztrack_queue            = $DC
 	zrandom                 = $DF
+	zppu_ctrl               = $FC
+	zppu_mask               = $FD
 
 	ademo_play_flag            = $67D
 	ademo_play_timer           = $67E
