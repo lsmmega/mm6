@@ -69,6 +69,7 @@ header := \
 
 home := \
 	home.asm \
+	constants/* \
 	home/*
 
 sprites := \

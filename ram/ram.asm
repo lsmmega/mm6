@@ -1,3 +1,6 @@
+	zjoy1_pressed         = $40
+	zjoy1_pressed_bits    = $42
+	zjoy1_pressed_xor     = $44
 	zaudio_queue          = $B0
 	zplayback_flag        = $C0
 	zaudio_C1             = $C1
@@ -27,7 +30,11 @@
 	zaudio_queue_index    = $D9
 	zaudio_queue_x        = $DA
 	ztrack_queue          = $DC
+	zrandom               = $DF
 
+	ademo_play_flag            = $67D
+	ademo_play_timer           = $67E
+	ademo_play_index           = $67F
 	achannel_instrument        = $700
 	astats_adsr_state          = $704
 	ainvert_vibrato            = $708
