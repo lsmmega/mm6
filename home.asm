@@ -1,7 +1,5 @@
 .SEGMENT "HOME"
 .INCLUDE "constants/button.asm"
-.INCLUDE "constants/nes.asm"
-.INCLUDE "ram/ram.asm"
 .INCBIN  "home/home_0_0.bin"
 .INCLUDE "home/joy.asm"
 .INCBIN  "home/home_0_1.bin"
