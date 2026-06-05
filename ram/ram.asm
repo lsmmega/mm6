@@ -1,3 +1,24 @@
+.ENUM
+	z00
+	z01
+	z02
+	z03
+	z04
+	z05
+	z06
+	z07
+	z08
+	z09
+	z0A
+	z0B
+	z0C
+	z0D
+	z0E
+	z0F
+	z10
+.ENDENUM
+
+	zbankswitch_index       = $11
 	zjoy1_pressed           = $40
 	zjoy1_pressed_bits      = $42
 	zjoy1_pressed_xor       = $44
@@ -38,6 +59,7 @@
 	zppu_ctrl               = $FC
 	zppu_mask               = $FD
 
+	astack                     = $100
 	ademo_play_flag            = $67D
 	ademo_play_timer           = $67E
 	ademo_play_index           = $67F
