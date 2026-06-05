@@ -10,6 +10,8 @@
 .INCLUDE "home/load_bankswitch.asm"
 .INCLUDE "home/bankswitch.asm"
 .INCBIN  "home/home_3.bin"
+.INCLUDE "home/bittest.asm"
+.INCBIN  "home/home_4.bin"
 ;.INCLUDE "home/reset.asm"
 ;.INCLUDE "home/irq.asm"
 ;.INCLUDE "home/nmi.asm"
