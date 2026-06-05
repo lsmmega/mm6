@@ -19,6 +19,8 @@
 .ENDENUM
 
 	zbankswitch_index       = $11
+	zbankswitch_a           = $17
+	zbankswitch_x           = $18
 	zjoy1_pressed           = $40
 	zjoy1_pressed_bits      = $42
 	zjoy1_pressed_xor       = $44

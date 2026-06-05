@@ -8,6 +8,7 @@
 .INCLUDE "home/init_screen.asm"
 .INCBIN  "home/home_2.bin"
 .INCLUDE "home/load_bankswitch.asm"
+.INCLUDE "home/bankswitch.asm"
 .INCBIN  "home/home_3.bin"
 ;.INCLUDE "home/reset.asm"
 ;.INCLUDE "home/irq.asm"
