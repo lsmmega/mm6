@@ -2,6 +2,7 @@ rom_obj := \
 	gfx.o \
 	header.o \
 	main.o \
+	screen.o \
 	sprites.o \
 	stages.o \
 	41.o \
@@ -10,9 +11,7 @@ rom_obj := \
 	56.o \
 	57.o \
 	58.o \
-	59.o \
-	60.o \
-	61.o
+	59.o
 
 cfg := \
 	mm6.cfg
@@ -71,6 +70,11 @@ home := \
 	constants/* \
 	ram/* \
 	home/*
+
+screen := \
+	screen.asm \
+	screen/* \
+	unused/*
 
 sprites := \
 	sprites.asm \
@@ -136,16 +140,6 @@ stages := \
 	59/* \
 	unused/*
 
-60 := \
-	60.asm \
-	60/* \
-	unused/*
-
-61 := \
-	61.asm \
-	61/* \
-	unused/*
-
 _gfx := \
 	gfx/0/0.bmp gfx/0/0.chr \
 	gfx/1/1.bmp gfx/1/1.chr \
@@ -198,6 +192,9 @@ header.o: $(header)
 main.o: $(audio) $(home)
 	ca65 main.asm
 
+screen.o: $(screen)
+	ca65 screen.asm
+
 sprites.o: $(sprites)
 	ca65 sprites.asm
 
@@ -224,12 +221,6 @@ stages.o: $(stages)
 
 59.o: $(59)
 	ca65 59.asm
-
-60.o: $(60)
-	ca65 60.asm
-
-61.o: $(61)
-	ca65 61.asm
 
 clean:
 	$(RM) $(rom_obj) \
