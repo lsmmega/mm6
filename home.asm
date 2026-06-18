@@ -5,7 +5,7 @@
 .INCLUDE "home/checksum.asm"
 .INCBIN  "home/home_0_0_1_0.bin"
 .INCLUDE "home/fade_in_out.asm"
-.INCBIN  "home/home_0_0_1_1.bin"
+.INCLUDE "home/screen_tiles.asm"
 .INCLUDE "home/joy.asm"
 .INCBIN  "home/home_0_1.bin"
 .INCLUDE "home/audio_queue.asm"

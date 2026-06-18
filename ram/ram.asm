@@ -34,6 +34,7 @@
 	zjoy1_pressed_bits      = $42
 	zjoy1_pressed_xor       = $44
 	zfade_in_out_flag       = $46
+	zscreen_tiles           = $47
 	zfade_in_out_rate       = $48
 	zlast_bank_data_1       = $4A
 	zlast_bank_data_2       = $4B
@@ -98,3 +99,4 @@
 	anote_ads_remain             = $740
 	achannel_loop_counter        = $744
 	achannel_handle              = $77C
+	ascreen_ppu_address          = $780
