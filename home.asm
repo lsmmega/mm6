@@ -12,6 +12,7 @@
 .INCLUDE "home/random.asm"
 .INCLUDE "home/audio_queue.asm"
 .INCBIN  "home/home_1.bin"
+.INCLUDE "home/tiles_pointer.asm"
 .INCLUDE "home/init_screen.asm"
 .INCBIN  "home/home_2.bin"
 .INCLUDE "home/load_bankswitch.asm"

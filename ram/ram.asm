@@ -39,6 +39,11 @@
 	zlast_bank_data_1       = $4A
 	zlast_bank_data_2       = $4B
 	zlast_bank_select       = $4C
+	ztiles_poioter          = $81
+	ztiles_address          = $83
+	ztiles_ppu_address      = $85
+	ztiles_size             = $87
+	ztiles_bank             = $8A
 	zaudio_queue            = $B0
 	zplayback_flag          = $C0
 	zaudio_C1               = $C1
