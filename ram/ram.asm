@@ -21,6 +21,8 @@
 	zbankswitch_index       = $11
 	zbankswitch_a           = $17
 	zbankswitch_x           = $18
+	zthread_timer           = $25
+	zthread_index           = $33
 	zjoy1_pressed           = $40
 	zjoy1_pressed_bits      = $42
 	zjoy1_pressed_xor       = $44
@@ -58,6 +60,7 @@
 	zaudio_queue_index_undo = $DB
 	ztrack_queue            = $DC
 	zrandom                 = $DF
+	znmi_wait               = $F2
 	zppu_ctrl               = $FC
 	zppu_mask               = $FD
 
