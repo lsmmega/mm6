@@ -69,8 +69,12 @@
 	zaudio_queue_x          = $DA
 	zaudio_queue_index_undo = $DB
 	ztrack_queue            = $DC
-	zrandom                 = $DF
+	zrandom_1               = $DF
+	zrandom_2               = $E0
+	zrandom_3               = $E1
+	zrandom_4               = $E2
 	znmi_wait               = $F2
+	znmi_frame              = $F3
 	znametable_arrangement  = $FB
 	zppu_ctrl               = $FC
 	zppu_mask               = $FD

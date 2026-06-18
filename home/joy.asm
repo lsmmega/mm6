@@ -50,7 +50,7 @@ _joy:
 	LDY ademo_play_index
 	LDA @demo_play_table, Y
 	STA z:zjoy1_pressed
-	LDA z:zrandom
+	LDA z:zrandom_1
 	AND #%00001111
 	BNE @not_fire
 	LDA #b_button
