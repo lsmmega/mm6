@@ -29,7 +29,7 @@ reset:
 @loop_3:
 	STA PPU_ADDRESS
 	STA PPU_ADDRESS
-	EOR #$10
+	EOR #%00010000
 	DEX
 	BNE @loop_3
 	TXA
@@ -46,7 +46,7 @@ reset:
 	DEX
 	BNE @loop_4
 	LDA #$01
-	STA znametable_arrangement
+	STA z:znametable_arrangement
 	STA nametable_arrangement
 	LDY #$05
 
