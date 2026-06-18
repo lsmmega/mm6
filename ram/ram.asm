@@ -61,6 +61,7 @@
 	ztrack_queue            = $DC
 	zrandom                 = $DF
 	znmi_wait               = $F2
+	znametable_arrangement  = $FB
 	zppu_ctrl               = $FC
 	zppu_mask               = $FD
 
