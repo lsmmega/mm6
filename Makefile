@@ -126,38 +126,38 @@ stages := \
 	unused/*
 
 _gfx := \
-	gfx/background/0.bmp gfx/background/0.chr \
-	gfx/background/1.bmp gfx/background/1.chr \
-	gfx/background/10.bmp gfx/background/10.chr \
-	gfx/background/8.bmp gfx/background/8.chr \
-	gfx/background/2.bmp gfx/background/2.chr \
-	gfx/background/3.bmp gfx/background/3.chr \
-	gfx/background/_26.bmp gfx/background/_26.chr \
-	gfx/background/6.bmp gfx/background/6.chr \
-	gfx/background/_28.bmp gfx/background/_28.chr \
-	gfx/background/9.bmp gfx/background/9.chr \
-	gfx/background/30.bmp gfx/background/30.chr \
-	gfx/background/15.bmp gfx/background/15.chr \
-	gfx/background/16.bmp gfx/background/16.chr \
 	gfx/background/20.bmp gfx/background/20.chr \
-	gfx/background/_2E.bmp gfx/background/_2E.chr \
+	gfx/background/21.bmp gfx/background/21.chr \
+	gfx/background/22.bmp gfx/background/22.chr \
 	gfx/background/23.bmp gfx/background/23.chr \
-	gfx/background/_30.bmp gfx/background/_30.chr \
+	gfx/background/24.bmp gfx/background/24.chr \
+	gfx/background/25.bmp gfx/background/25.chr \
+	gfx/background/26.bmp gfx/background/26.chr \
+	gfx/background/27.bmp gfx/background/27.chr \
+	gfx/background/28.bmp gfx/background/28.chr \
 	gfx/background/29.bmp gfx/background/29.chr \
-	gfx/background/_32.bmp gfx/background/_32.chr \
+	gfx/background/2A.bmp gfx/background/2A.chr \
+	gfx/background/2B.bmp gfx/background/2B.chr \
+	gfx/background/2C.bmp gfx/background/2C.chr \
+	gfx/background/2D.bmp gfx/background/2D.chr \
+	gfx/background/2E.bmp gfx/background/2E.chr \
+	gfx/background/2F.bmp gfx/background/2F.chr \
+	gfx/background/30.bmp gfx/background/30.chr \
+	gfx/background/31.bmp gfx/background/31.chr \
+	gfx/background/32.bmp gfx/background/32.chr \
+	gfx/background/33.bmp gfx/background/33.chr \
 	gfx/background/34.bmp gfx/background/34.chr \
+	gfx/background/35.bmp gfx/background/35.chr \
 	gfx/background/36.bmp gfx/background/36.chr \
-	gfx/background/42.bmp gfx/background/42.chr \
-	gfx/background/49.bmp gfx/background/49.chr \
-	gfx/background/58.bmp gfx/background/58.chr \
-	gfx/background/_38.bmp gfx/background/_38.chr \
-	gfx/background/67.bmp gfx/background/67.chr \
-	gfx/background/71.bmp gfx/background/71.chr \
-	gfx/background/73.bmp gfx/background/73.chr \
-	gfx/background/_3C.bmp gfx/background/_3C.chr \
-	gfx/background/_3D.bmp gfx/background/_3D.chr \
-	gfx/background/_3E.bmp gfx/background/_3E.chr \
-	gfx/background/_3F.bmp gfx/background/_3F.chr \
+	gfx/background/37.bmp gfx/background/37.chr \
+	gfx/background/38.bmp gfx/background/38.chr \
+	gfx/background/39.bmp gfx/background/39.chr \
+	gfx/background/3A.bmp gfx/background/3A.chr \
+	gfx/background/3B.bmp gfx/background/3B.chr \
+	gfx/background/3C.bmp gfx/background/3C.chr \
+	gfx/background/3D.bmp gfx/background/3D.chr \
+	gfx/background/3E.bmp gfx/background/3E.chr \
+	gfx/background/3F.bmp gfx/background/3F.chr \
 	gfx/0/0.bmp gfx/0/0.chr \
 	gfx/1/1.bmp gfx/1/1.chr \
 	gfx/2/2.bmp gfx/2/2.chr \
