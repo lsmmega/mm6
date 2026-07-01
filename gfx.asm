@@ -47,49 +47,65 @@
 .INCBIN  "gfx/15/15.chr"
 
 .SEGMENT "BANK10"
-.INCBIN  "gfx/16/16.chr"
+.INCBIN  "gfx/background/0.chr"
+.INCBIN  "gfx/background/1.chr"
 
 .SEGMENT "BANK11"
-.INCBIN  "gfx/17/17.chr"
+.INCBIN  "gfx/background/10.chr"
+.INCBIN  "gfx/background/8.chr"
 
 .SEGMENT "BANK12"
-.INCBIN  "gfx/18/18.chr"
+.INCBIN  "gfx/background/2.chr"
+.INCBIN  "gfx/background/3.chr"
 
 .SEGMENT "BANK13"
-.INCBIN  "gfx/19/19.chr"
+.INCBIN  "gfx/background/_26.chr"
+.INCBIN  "gfx/background/6.chr"
 
 .SEGMENT "BANK14"
-.INCBIN  "gfx/20/20.chr"
+.INCBIN  "gfx/background/_28.chr"
+.INCBIN  "gfx/background/9.chr"
 
 .SEGMENT "BANK15"
-.INCBIN  "gfx/21/21.chr"
+.INCBIN  "gfx/background/30.chr"
+.INCBIN  "gfx/background/15.chr"
 
 .SEGMENT "BANK16"
-.INCBIN  "gfx/22/22.chr"
+.INCBIN  "gfx/background/16.chr"
+.INCBIN  "gfx/background/20.chr"
 
 .SEGMENT "BANK17"
-.INCBIN  "gfx/23/23.chr"
+.INCBIN  "gfx/background/_2E.chr"
+.INCBIN  "gfx/background/23.chr"
 
 .SEGMENT "BANK18"
-.INCBIN  "gfx/24/24.chr"
+.INCBIN  "gfx/background/_30.chr"
+.INCBIN  "gfx/background/29.chr"
 
 .SEGMENT "BANK19"
-.INCBIN  "gfx/25/25.chr"
+.INCBIN  "gfx/background/_32.chr"
+.INCBIN  "gfx/background/34.chr"
 
 .SEGMENT "BANK1A"
-.INCBIN  "gfx/26/26.chr"
+.INCBIN  "gfx/background/36.chr"
+.INCBIN  "gfx/background/42.chr"
 
 .SEGMENT "BANK1B"
-.INCBIN  "gfx/27/27.chr"
+.INCBIN  "gfx/background/49.chr"
+.INCBIN  "gfx/background/58.chr"
 
 .SEGMENT "BANK1C"
-.INCBIN  "gfx/28/28.chr"
+.INCBIN  "gfx/background/_38.chr"
+.INCBIN  "gfx/background/67.chr"
 
 .SEGMENT "BANK1D"
-.INCBIN  "gfx/29/29.chr"
+.INCBIN  "gfx/background/71.chr"
+.INCBIN  "gfx/background/73.chr"
 
 .SEGMENT "BANK1E"
-.INCBIN  "gfx/30/30.chr"
+.INCBIN  "gfx/background/_3C.chr"
+.INCBIN  "gfx/background/_3D.chr"
 
 .SEGMENT "BANK1F"
-.INCBIN  "gfx/31/31.chr"
+.INCBIN  "gfx/background/_3E.chr"
+.INCBIN  "gfx/background/_3F.chr"

@@ -28,6 +28,7 @@ audio := \
 
 gfx := \
 	gfx.asm \
+	gfx/background/*.bmp \
 	gfx/0/*.bmp \
 	gfx/1/*.bmp \
 	gfx/2/*.bmp \
@@ -43,23 +44,7 @@ gfx := \
 	gfx/12/*.bmp \
 	gfx/13/*.bmp \
 	gfx/14/*.bmp \
-	gfx/15/*.bmp \
-	gfx/16/*.bmp \
-	gfx/17/*.bmp \
-	gfx/18/*.bmp \
-	gfx/19/*.bmp \
-	gfx/20/*.bmp \
-	gfx/21/*.bmp \
-	gfx/22/*.bmp \
-	gfx/23/*.bmp \
-	gfx/24/*.bmp \
-	gfx/25/*.bmp \
-	gfx/26/*.bmp \
-	gfx/27/*.bmp \
-	gfx/28/*.bmp \
-	gfx/29/*.bmp \
-	gfx/30/*.bmp \
-	gfx/31/*.bmp
+	gfx/15/*.bmp
 
 header := \
 	header.asm \
@@ -141,6 +126,38 @@ stages := \
 	unused/*
 
 _gfx := \
+	gfx/background/0.bmp gfx/background/0.chr \
+	gfx/background/1.bmp gfx/background/1.chr \
+	gfx/background/10.bmp gfx/background/10.chr \
+	gfx/background/8.bmp gfx/background/8.chr \
+	gfx/background/2.bmp gfx/background/2.chr \
+	gfx/background/3.bmp gfx/background/3.chr \
+	gfx/background/_26.bmp gfx/background/_26.chr \
+	gfx/background/6.bmp gfx/background/6.chr \
+	gfx/background/_28.bmp gfx/background/_28.chr \
+	gfx/background/9.bmp gfx/background/9.chr \
+	gfx/background/30.bmp gfx/background/30.chr \
+	gfx/background/15.bmp gfx/background/15.chr \
+	gfx/background/16.bmp gfx/background/16.chr \
+	gfx/background/20.bmp gfx/background/20.chr \
+	gfx/background/_2E.bmp gfx/background/_2E.chr \
+	gfx/background/23.bmp gfx/background/23.chr \
+	gfx/background/_30.bmp gfx/background/_30.chr \
+	gfx/background/29.bmp gfx/background/29.chr \
+	gfx/background/_32.bmp gfx/background/_32.chr \
+	gfx/background/34.bmp gfx/background/34.chr \
+	gfx/background/36.bmp gfx/background/36.chr \
+	gfx/background/42.bmp gfx/background/42.chr \
+	gfx/background/49.bmp gfx/background/49.chr \
+	gfx/background/58.bmp gfx/background/58.chr \
+	gfx/background/_38.bmp gfx/background/_38.chr \
+	gfx/background/67.bmp gfx/background/67.chr \
+	gfx/background/71.bmp gfx/background/71.chr \
+	gfx/background/73.bmp gfx/background/73.chr \
+	gfx/background/_3C.bmp gfx/background/_3C.chr \
+	gfx/background/_3D.bmp gfx/background/_3D.chr \
+	gfx/background/_3E.bmp gfx/background/_3E.chr \
+	gfx/background/_3F.bmp gfx/background/_3F.chr \
 	gfx/0/0.bmp gfx/0/0.chr \
 	gfx/1/1.bmp gfx/1/1.chr \
 	gfx/2/2.bmp gfx/2/2.chr \
@@ -156,23 +173,7 @@ _gfx := \
 	gfx/12/12.bmp gfx/12/12.chr \
 	gfx/13/13.bmp gfx/13/13.chr \
 	gfx/14/14.bmp gfx/14/14.chr \
-	gfx/15/15.bmp gfx/15/15.chr \
-	gfx/16/16.bmp gfx/16/16.chr \
-	gfx/17/17.bmp gfx/17/17.chr \
-	gfx/18/18.bmp gfx/18/18.chr \
-	gfx/19/19.bmp gfx/19/19.chr \
-	gfx/20/20.bmp gfx/20/20.chr \
-	gfx/21/21.bmp gfx/21/21.chr \
-	gfx/22/22.bmp gfx/22/22.chr \
-	gfx/23/23.bmp gfx/23/23.chr \
-	gfx/24/24.bmp gfx/24/24.chr \
-	gfx/25/25.bmp gfx/25/25.chr \
-	gfx/26/26.bmp gfx/26/26.chr \
-	gfx/27/27.bmp gfx/27/27.chr \
-	gfx/28/28.bmp gfx/28/28.chr \
-	gfx/29/29.bmp gfx/29/29.chr \
-	gfx/30/30.bmp gfx/30/30.chr \
-	gfx/31/31.bmp gfx/31/31.chr
+	gfx/15/15.bmp gfx/15/15.chr
 
 .PHONY: all mm6 clean
 
