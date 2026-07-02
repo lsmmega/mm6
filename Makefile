@@ -1,5 +1,4 @@
 rom_obj := \
-	gfx.o \
 	header.o \
 	main.o \
 	screen.o \
@@ -28,23 +27,13 @@ audio := \
 
 gfx := \
 	gfx.asm \
+	constants/* \
+	macros/* \
+	stages/* \
+	gfx/objects/*.bmp \
 	gfx/background/*.bmp \
-	gfx/0/*.bmp \
-	gfx/1/*.bmp \
-	gfx/2/*.bmp \
-	gfx/3/*.bmp \
-	gfx/4/*.bmp \
-	gfx/5/*.bmp \
-	gfx/6/*.bmp \
-	gfx/7/*.bmp \
-	gfx/8/*.bmp \
-	gfx/9/*.bmp \
-	gfx/10/*.bmp \
-	gfx/11/*.bmp \
-	gfx/12/*.bmp \
-	gfx/13/*.bmp \
-	gfx/14/*.bmp \
-	gfx/15/*.bmp
+	unused/* \
+	data/*
 
 header := \
 	header.asm \
@@ -126,6 +115,28 @@ stages := \
 	unused/*
 
 _gfx := \
+	gfx/objects/00.bmp gfx/objects/00.chr \
+	gfx/objects/01.bmp gfx/objects/01.chr \
+	gfx/objects/02.bmp gfx/objects/02.chr \
+	gfx/objects/03.bmp gfx/objects/03.chr \
+	gfx/objects/04.bmp gfx/objects/04.chr \
+	gfx/objects/05.bmp gfx/objects/05.chr \
+	gfx/objects/06.bmp gfx/objects/06.chr \
+	gfx/objects/07.bmp gfx/objects/07.chr \
+	gfx/objects/08.bmp gfx/objects/08.chr \
+	gfx/objects/09.bmp gfx/objects/09.chr \
+	gfx/objects/0A.bmp gfx/objects/0A.chr \
+	gfx/objects/0B.bmp gfx/objects/0B.chr \
+	gfx/objects/0C.bmp gfx/objects/0C.chr \
+	gfx/objects/0D.bmp gfx/objects/0D.chr \
+	gfx/objects/0E.bmp gfx/objects/0E.chr \
+	gfx/objects/0F.bmp gfx/objects/0F.chr \
+	gfx/objects/10.bmp gfx/objects/10.chr \
+	gfx/objects/11.bmp gfx/objects/11.chr \
+	gfx/objects/12.bmp gfx/objects/12.chr \
+	gfx/objects/13.bmp gfx/objects/13.chr \
+	gfx/objects/14.bmp gfx/objects/14.chr \
+	gfx/objects/15.bmp gfx/objects/15.chr \
 	gfx/background/20.bmp gfx/background/20.chr \
 	gfx/background/21.bmp gfx/background/21.chr \
 	gfx/background/22.bmp gfx/background/22.chr \
@@ -157,23 +168,7 @@ _gfx := \
 	gfx/background/3C.bmp gfx/background/3C.chr \
 	gfx/background/3D.bmp gfx/background/3D.chr \
 	gfx/background/3E.bmp gfx/background/3E.chr \
-	gfx/background/3F.bmp gfx/background/3F.chr \
-	gfx/0/0.bmp gfx/0/0.chr \
-	gfx/1/1.bmp gfx/1/1.chr \
-	gfx/2/2.bmp gfx/2/2.chr \
-	gfx/3/3.bmp gfx/3/3.chr \
-	gfx/4/4.bmp gfx/4/4.chr \
-	gfx/5/5.bmp gfx/5/5.chr \
-	gfx/6/6.bmp gfx/6/6.chr \
-	gfx/7/7.bmp gfx/7/7.chr \
-	gfx/8/8.bmp gfx/8/8.chr \
-	gfx/9/9.bmp gfx/9/9.chr \
-	gfx/10/10.bmp gfx/10/10.chr \
-	gfx/11/11.bmp gfx/11/11.chr \
-	gfx/12/12.bmp gfx/12/12.chr \
-	gfx/13/13.bmp gfx/13/13.chr \
-	gfx/14/14.bmp gfx/14/14.chr \
-	gfx/15/15.bmp gfx/15/15.chr
+	gfx/background/3F.bmp gfx/background/3F.chr
 
 .PHONY: all mm6 clean
 
@@ -183,14 +178,11 @@ mm6: mm6.nes
 %.nes: $(rom_obj) $(cfg)
 	ld65 -C $(cfg) $(rom_obj) -o $@ -m $*.map
 
-gfx.o: $(gfx)
-	bmp2nes $(_gfx)
-	ca65 gfx.asm
-
 header.o: $(header)
 	ca65 header.asm
 
-main.o: $(audio) $(home)
+main.o: $(audio) $(gfx) $(home)
+	bmp2nes $(_gfx)
 	ca65 main.asm
 
 screen.o: $(screen)

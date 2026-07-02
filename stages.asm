@@ -64,9 +64,3 @@
 .INCLUDE "stages/tomahawkman/tomahawkman_mapset.asm"
 .INCLUDE "stages/knightman/knightman_mapset.asm"
 .INCLUDE "stages/centaurman/centaurman_mapset.asm"
-
-.SEGMENT "BANK37"
-.INCBIN  "stages/palettes_55_0.bin"
-.INCLUDE "stages/unused/unused_6e410.asm"
-.INCBIN  "stages/palettes_55_1.bin"
-.INCLUDE "stages/unused/unused_6f89f.asm"
