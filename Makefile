@@ -104,8 +104,10 @@ stages := \
 	unused/*
 
 58 := \
+	ram/* \
 	58.asm \
 	58/* \
+	engine/* \
 	sprites/* \
 	unused/*
 
