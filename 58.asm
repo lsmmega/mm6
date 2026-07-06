@@ -1,8 +1,0 @@
-.SEGMENT "BANK3A"
-.INCLUDE "ram/ram.asm"
-.INCBIN  "58/58_0_0.bin"
-.INCLUDE "engine/addz0809addr.asm"
-.INCBIN  "58/58_0_1.bin"
-.INCLUDE "sprites/bankswitch.asm"
-.INCBIN  "58/58_1.bin"
-.INCLUDE "unused/unused_755e4.asm"

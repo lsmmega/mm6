@@ -9,7 +9,6 @@ rom_obj := \
 	49.o \
 	56.o \
 	57.o \
-	58.o \
 	59.o
 
 cfg := \
@@ -60,6 +59,7 @@ sprites := \
 stages := \
 	stages.asm \
 	constants/* \
+	ram/* \
 	stages/* \
 	stages/wily1/* \
 	stages/wily2/* \
@@ -77,7 +77,11 @@ stages := \
 	stages/plantman/* \
 	stages/flameman/* \
 	stages/x2/* \
-	stages/x3/*
+	stages/x3/* \
+	58/* \
+	engine/* \
+	sprites/* \
+	unused/*
 
 41 := \
 	41.asm \
@@ -101,14 +105,6 @@ stages := \
 57 := \
 	57.asm \
 	57/* \
-	unused/*
-
-58 := \
-	ram/* \
-	58.asm \
-	58/* \
-	engine/* \
-	sprites/* \
 	unused/*
 
 59 := \
@@ -193,7 +189,7 @@ screen.o: $(screen)
 sprites.o: $(sprites)
 	ca65 sprites.asm
 
-stages.o: $(stages)
+stages.o: $(stages) $(58)
 	ca65 stages.asm
 
 41.o: $(41)
@@ -210,9 +206,6 @@ stages.o: $(stages)
 
 57.o: $(57)
 	ca65 57.asm
-
-58.o: $(58)
-	ca65 58.asm
 
 59.o: $(59)
 	ca65 59.asm
