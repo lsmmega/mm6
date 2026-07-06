@@ -71,6 +71,7 @@
 .SEGMENT "BANK3A"
 .INCBIN  "58/58_0_0.bin"
 .INCLUDE "engine/addz0809addr.asm"
+.INCLUDE "stages/objects_set.asm"
 .INCBIN  "58/58_0_1.bin"
 .INCLUDE "sprites/bankswitch.asm"
 .INCLUDE "stages/blizzardman/blizzardman_objects_set.asm"
