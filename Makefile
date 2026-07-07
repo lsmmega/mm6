@@ -3,13 +3,7 @@ rom_obj := \
 	main.o \
 	screen.o \
 	sprites.o \
-	stages.o \
-	41.o \
-	48.o \
-	49.o \
-	56.o \
-	57.o \
-	59.o
+	stages.o
 
 cfg := \
 	mm6.cfg
@@ -60,7 +54,6 @@ stages := \
 	stages.asm \
 	constants/* \
 	ram/* \
-	stages/* \
 	stages/wily1/* \
 	stages/wily2/* \
 	stages/wily3/* \
@@ -78,38 +71,11 @@ stages := \
 	stages/flameman/* \
 	stages/x2/* \
 	stages/x3/* \
+	stages/* \
+	ai/* \
 	58/* \
 	engine/* \
 	sprites/* \
-	unused/*
-
-41 := \
-	41.asm \
-	41/* \
-	unused/*
-
-48 := \
-	48.asm \
-	48/* \
-	unused/*
-
-49 := \
-	49.asm \
-	49/* \
-	unused/*
-
-56 := \
-	56.asm \
-	56/*
-
-57 := \
-	57.asm \
-	57/* \
-	unused/*
-
-59 := \
-	59.asm \
-	59/* \
 	unused/*
 
 _gfx := \
@@ -189,26 +155,8 @@ screen.o: $(screen)
 sprites.o: $(sprites)
 	ca65 sprites.asm
 
-stages.o: $(stages) $(58)
+stages.o: $(stages)
 	ca65 stages.asm
-
-41.o: $(41)
-	ca65 41.asm
-
-48.o: $(48)
-	ca65 48.asm
-
-49.o: $(49)
-	ca65 49.asm
-
-56.o: $(56)
-	ca65 56.asm
-
-57.o: $(57)
-	ca65 57.asm
-
-59.o: $(59)
-	ca65 59.asm
 
 clean:
 	$(RM) $(rom_obj) \

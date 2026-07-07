@@ -25,7 +25,7 @@
 	objects_enemies_killed
 	objects_metall
 	objects_count_bomb_up
-	objects_14
+	objects_1a
 	objects_cannopeller
 	objects_cannopeller_bullet
 	objects_e_tank
