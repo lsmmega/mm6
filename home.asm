@@ -1,6 +1,5 @@
 .SEGMENT "HOME"
 .INCLUDE "constants/button.asm"
-.INCLUDE "constants/palettes.asm"
 .INCLUDE "macros/stack.asm"
 .INCBIN  "home/home_0_0_0.bin"
 .INCLUDE "home/checksum.asm"

@@ -26,6 +26,8 @@ gfx := \
 	gfx/objects/*.bmp \
 	gfx/background/*.bmp \
 	unused/* \
+	palettes/pointers/* \
+	palettes/* \
 	data/*
 
 header := \

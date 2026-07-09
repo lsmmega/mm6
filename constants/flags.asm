@@ -7,6 +7,10 @@
 ;energy balancer
 	got_energy_balancer = 1
 
+;palettes set flags
+	palettes_set_black_common = 1 << 6
+	palettes_set_end          = 1 << 7
+
 ;rematch flags
 	rematch_blizzardman_done = 1 << 0
 	rematch_windman_done     = 1 << 1

@@ -14,12 +14,6 @@
 .INCLUDE "stages/wily3/wily3_mapset.asm"
 .INCLUDE "stages/wily4/wily4_mapset.asm"
 
-.SEGMENT "BANK28"
-.INCBIN  "stages/palettes_40_0.bin"
-.INCLUDE "stages/unused/unused_50488.asm"
-.INCBIN  "stages/palettes_40_1.bin"
-.INCLUDE "stages/unused/unused_5189f.asm"
-
 .SEGMENT "BANK29"
 .INCBIN  "ai/41.bin"
 
