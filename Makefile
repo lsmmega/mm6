@@ -42,6 +42,8 @@ home := \
 
 screen := \
 	screen.asm \
+	constants/* \
+	macros/* \
 	screen/* \
 	unused/*
 
