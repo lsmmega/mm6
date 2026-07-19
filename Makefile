@@ -41,7 +41,7 @@ home := \
 	home/*
 
 miscellaneous := \
-	screen.asm \
+	miscellaneous.asm \
 	constants/* \
 	constants/charmap/* \
 	macros/* \
