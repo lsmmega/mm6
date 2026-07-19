@@ -1,3 +1,5 @@
+.INCLUDE "constants/charmap/title.asm"
+
 screen_set_00:
 	screen_set increase_hex_value_by_1, write_ppu_address_direct, $0C, $20AA
 	.BYTE $92 ;tileset hex
@@ -105,8 +107,7 @@ screen_set_00:
 	.BYTE $57, $5B ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0D, $06
-	.BYTE $0A, $0B, $07, $0C, $0C, $00, $0C, $0D
-	.BYTE $04, $0B, $0D, $00, $00 ;tileset hex
+	.BYTE "PRESS START  "
 
 	screen_set increase_hex_value_by_1, set_current_ppu_address, $05
 	.BYTE $44 ;tileset hex
@@ -115,8 +116,7 @@ screen_set_00:
 	.BYTE $49 ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $0F
-	.BYTE $0A, $04, $0C, $0C, $00, $0E, $09, $0B
-	.BYTE $06 ;tileset hex
+	.BYTE "PASS WORD"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $04
 	.BYTE $4D, $4E, $4F ;tileset hex
@@ -131,8 +131,7 @@ screen_set_00:
 	.BYTE $55, $56 ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $10
-	.BYTE $0F, $05, $04, $0A, $05, $09, $08, $00
-	.BYTE $01, $03, $03, $02 ;tileset hex
+	.BYTE $0F, "CAPCOM 1993"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $04, $23CA
 	.BYTE topleft_palette_0 | topright_palette_2 | bottomleft_palette_1 | bottomright_palette_1
@@ -562,24 +561,26 @@ screen_set_07:
 	.BYTE topleft_palette_0 | topright_palette_0 | bottomleft_palette_1 | bottomright_palette_0
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/debug.asm"
+
 screen_set_08:
 	screen_set write_hex_direct, write_ppu_address_direct, $03, $2085
-	.BYTE $53, $45, $51 ;tileset hex
+	.BYTE "SEQ"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $03, $20A5
-	.BYTE $43, $4F, $4C ;tileset hex
+	.BYTE "COL"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $03, $20C5
-	.BYTE $54, $42, $4C ;tileset hex
+	.BYTE "TBL"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $03, $20E5
-	.BYTE $54, $4D, $52 ;tileset hex
+	.BYTE "TMR"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $05, $22AD
-	.BYTE $53, $4F, $55, $4E, $44 ;tileset hex
+	.BYTE "SOUND"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $06, $216C
-	.BYTE $50, $4C, $41, $59, $45, $52 ;tileset hex
+	.BYTE "PLAYER"
 	.BYTE 0 ;end
 
 screen_set_09:
@@ -592,6 +593,8 @@ screen_set_09:
 	screen_set write_hex_direct, write_ppu_address_direct, $01, $2846
 	.BYTE $45 ;tileset hex
 	.BYTE 0 ;end
+
+.INCLUDE "constants/charmap/weapons_select.asm"
 
 screen_set_0a:
 screen_set_0b:
@@ -610,8 +613,7 @@ screen_set_10:
 	.BYTE $12 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $09
-	.BYTE $13, $10, $10, $17, $00, $00, $2D, $01
-	.BYTE $31 ;tileset hex
+	.BYTE $13, $10, $10, $17, $00, $00, "N0R"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $17
 	.BYTE $18, $10, $10, $17, $00, $00, $40, $41
@@ -622,7 +624,7 @@ screen_set_10:
 	.BYTE $52 ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $04, $0F
-	.BYTE $2B, $28, $25, $24 ;tileset hex
+	.BYTE "LIFE"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $04
 	.BYTE $18, $10, $10, $17, $00, $00, $60, $61
@@ -645,8 +647,7 @@ screen_set_10:
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $11, $1C
 	.BYTE $18, $10, $10, $17, $00, $00, $70, $71
-	.BYTE $00, $2C, $46, $21, $34, $32, $33, $24
-	.BYTE $31 ;tileset hex
+	.BYTE $00, "M.BUSTER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $0F
 	.BYTE $18, $10, $10, $17, $00, $00, $72, $73
@@ -729,11 +730,11 @@ screen_set_10:
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0D, $05
 	.BYTE $18, $10, $10, $17, $00, $00, $5E, $5F
-	.BYTE $00, $01, $01, $00, $1D ;tileset hex
+	.BYTE $00, "00", $00, $1D
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0D, $0A
-	.BYTE $1D, $00, $3D, $3E, $00, $01, $01, $00
-	.BYTE $00, $18, $10, $10, $17 ;tileset hex
+	.BYTE $1D, $00, $3D, $3E, $00, "00", $00
+	.BYTE $00, $18, $10, $10, $17
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $01, $08
 	.BYTE $1D ;tileset hex
@@ -970,6 +971,8 @@ screen_set_11:
 	.BYTE topleft_palette_3 | topright_palette_3 | bottomleft_palette_0 | bottomright_palette_0
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/bosses.asm"
+
 screen_set_12:
 	screen_set copy_hex_value, write_ppu_address_direct, $3F, $2000
 	.BYTE $10 ;tileset hex
@@ -978,8 +981,7 @@ screen_set_12:
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $0B
-	.BYTE $3A, $3C, $2F, $3D, $3D, $10, $3D, $3E
-	.BYTE $2B, $3C, $3E ;tileset hex
+	.BYTE "PRESS START"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0D, $00
 	.BYTE $10 ;tileset hex
@@ -1144,37 +1146,37 @@ screen_set_12:
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $08
-	.BYTE $2C, $36, $33, $44, $44, $2B, $3C, $2E ;tileset hex
+	.BYTE "BLIZZARD"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $03, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $04
-	.BYTE $41, $33, $38, $2E ;tileset hex
+	.BYTE "WIND"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $05
-	.BYTE $30, $36, $2B, $37, $2F ;tileset hex
+	.BYTE "FLAME"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0A, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $10 ;tileset hex
@@ -1334,25 +1336,25 @@ screen_set_12:
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $05
-	.BYTE $3A, $36, $2B, $38, $3E ;tileset hex
+	.BYTE "PLANT"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0E, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $08
-	.BYTE $3E, $39, $37, $2B, $32, $2B, $41, $35 ;tileset hex
+	.BYTE "TOMAHAWK"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $08, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $11, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $10 ;tileset hex
@@ -1517,37 +1519,37 @@ screen_set_12:
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $06
-	.BYTE $43, $2B, $37, $2B, $3E, $39 ;tileset hex
+	.BYTE "YAMATO"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $04, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $06
-	.BYTE $35, $38, $33, $31, $32, $3E ;tileset hex
+	.BYTE "KNIGHT"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $03, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $07
-	.BYTE $2D, $2F, $38, $3E, $2B, $3F, $3C ;tileset hex
+	.BYTE "CENTAUR"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $09, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $10 ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $3F, $00
 	.BYTE $10 ;tileset hex
@@ -1578,6 +1580,8 @@ screen_set_12:
 	.BYTE topleft_palette_2 | topright_palette_2 | bottomleft_palette_2 | bottomright_palette_2
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/boss_show.asm"
+
 screen_set_13:
 	screen_set write_hex_direct, write_ppu_address_direct, $02, $2020
 	.BYTE $28, $29 ;tileset hex
@@ -1593,12 +1597,12 @@ screen_set_13:
 	.BYTE $2D ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $0E
-	.BYTE $2E, $2B, $2B, $67, $2F, $38, $39, $37
-	.BYTE $34, $40, $36, $37, $46, $3A ;tileset hex
+	.BYTE $2E, $2B, $2B, $67, $2F, $38, $39
+	.BYTE "HEIGHT", $3A
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $03
-	.BYTE $3B, $26, $26, $68, $47, $34, $40, $36
-	.BYTE $37, $46, $26, $3A ;tileset hex
+	.BYTE $3B, $26, $26, $68
+	.BYTE "WEIGHT", $26, $3A
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $04, $03
 	.BYTE $3B, $69, $38, $6A ;tileset hex
@@ -1614,12 +1618,12 @@ screen_set_13:
 	.BYTE $3F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $0E
-	.BYTE $48, $6C, $3C, $3D, $49, $4A, $4B, $30
-	.BYTE $46, $46, $30, $32, $41, $3A ;tileset hex
+	.BYTE $48, $6C, $3C, $3D, $49, $4A, $4B
+	.BYTE "ATTACK", $3A
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $03
-	.BYTE $3B, $26, $26, $68, $33, $34, $35, $34
-	.BYTE $44, $32, $34, $3A ;tileset hex
+	.BYTE $3B, $26, $26, $68
+	.BYTE "DEFENCE", $3A
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $03
 	.BYTE $72, $6C, $49, $4A, $49, $4A, $3E ;tileset hex
@@ -1634,8 +1638,8 @@ screen_set_13:
 	.BYTE $3F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $0E
-	.BYTE $53, $6E, $6F, $67, $4C, $4D, $4B, $43
-	.BYTE $45, $31, $40, $42, $34, $3A ;tileset hex
+	.BYTE $53, $6E, $6F, $67, $4C, $4D, $4B
+	.BYTE "MOBILE", $3A
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $04, $03
 	.BYTE $3B, $26, $26, $71 ;tileset hex
@@ -1844,6 +1848,8 @@ screen_set_13:
 	.BYTE topleft_palette_0 | topright_palette_1 | bottomleft_palette_0 | bottomright_palette_0
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/common.asm"
+
 screen_set_14:
 	screen_set write_hex_direct, write_ppu_address_direct, $20, $2000
 	.BYTE $D8, $DD, $DD, $DB, $A5, $CB, $87, $CC
@@ -1944,11 +1950,12 @@ screen_set_14:
 	.BYTE $CF, $DD, $DB, $DC, $D3, $86, $CC, $D0
 	.BYTE $D1, $C2, $C3, $C4, $C3, $C4, $C3, $C4
 	.BYTE $C3, $C4, $C3, $C4, $C3, $96, $B8, $80
-	.BYTE $81, $82, $CD, $00, $0F, $18, $0E, $00
-	.BYTE $CF, $82, $83, $D8, $BB, $DB, $CC, $9A
-	.BYTE $9C, $D2, $00, $D4, $00, $D4, $00, $D4
-	.BYTE $00, $D4, $00, $D4, $00, $A7, $B8, $90
-	.BYTE $91, $7D, $CD ;tileset hex
+	.BYTE $81, $82, $CD, $00
+	.BYTE "END"
+	.BYTE $00, $CF, $82, $83, $D8, $BB, $DB, $CC
+	.BYTE $9A, $9C, $D2, $00, $D4, $00, $D4, $00
+	.BYTE $D4, $00, $D4, $00, $D4, $00, $A7, $B8
+	.BYTE $90, $91, $7D, $CD
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $1B, $05
 	.BYTE $CF, $7D, $83, $A5, $CB, $DE, $CC, $D0
@@ -2111,8 +2118,7 @@ screen_set_15:
 
 screen_set_16:
 	screen_set write_hex_direct, write_ppu_address_direct, $0F, $230A
-	.BYTE $1A, $0B, $1D, $1D, $00, $21, $19, $1C
-	.BYTE $0E, $00, $0F, $1C, $1C, $19, $1C ;tileset hex
+	.BYTE "PASS WORD ERROR"
 	.BYTE 0 ;end
 
 screen_set_17:
@@ -2131,22 +2137,20 @@ screen_set_17:
 
 screen_set_18:
 	screen_set write_hex_direct, write_ppu_address_direct, $09, $230C
-	.BYTE $11, $0B, $17, $0F, $00, $19, $20, $0F
-	.BYTE $1C ;tileset hex
+	.BYTE "GAME OVER"
 	.BYTE 0 ;end
 
 screen_set_19:
 	screen_set write_hex_direct, write_ppu_address_direct, $0C, $22EB
-	.BYTE $1D, $1E, $0B, $11, $0F, $00, $1D, $0F
-	.BYTE $16, $0F, $0D, $1E ;tileset hex
+	.BYTE "STAGE SELECT"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $34
-	.BYTE $0D, $19, $18, $1E, $13, $18, $1F, $0F ;tileset hex
+	.BYTE "CONTINUE"
 	.BYTE 0 ;end
 
 screen_set_1a:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $230B
-	.BYTE $0D, $19, $18, $1E, $13, $18, $1F, $0F ;tileset hex
+	.BYTE "CONTINUE"
 	.BYTE 0 ;end
 
 screen_set_1b:
@@ -2260,19 +2264,13 @@ screen_set_1e:
 
 screen_set_1f:
 	screen_set write_hex_direct, write_ppu_address_direct, $16, $2165
-	.BYTE $6E, $00, $0D, $0B, $1A, $0D, $19, $17
-	.BYTE $00, $0D, $19, $25, $2E, $16, $1E, $0E
-	.BYTE $25, $00, $02, $0A, $0A, $04 ;tileset hex
+	.BYTE $6E, " CAPCOM CO.,LTD. 1993"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $16, $2A
-	.BYTE $6E, $00, $0D, $0B, $1A, $0D, $19, $17
-	.BYTE $00, $1F, $1D, $0B, $2E, $13, $18, $0D
-	.BYTE $25, $00, $02, $0A, $0A, $04 ;tileset hex
+	.BYTE $6E, " CAPCOM USA,INC. 1993"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $14, $2206
-	.BYTE $16, $13, $0D, $0F, $18, $1D, $0F, $0E
-	.BYTE $00, $0C, $23, $00, $18, $13, $18, $1E
-	.BYTE $0F, $18, $0E, $19 ;tileset hex
+	.BYTE "LICENSED BY NINTENDO"
 
 	screen_set copy_hex_value, write_ppu_address_direct, $06, $23D1
 	.BYTE topleft_palette_0 | topright_palette_0 | bottomleft_palette_2 | bottomright_palette_2
@@ -2609,10 +2607,11 @@ screen_set_37:
 	.BYTE $00 ;tileset hex
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/weapons_select.asm"
+
 screen_set_38:
 	screen_set write_hex_direct, write_ppu_address_direct, $0A, $2184
-	.BYTE $6E, $6F, $00, $38, $46, $32, $2F, $24
-	.BYTE $20, $31 ;tileset hex
+	.BYTE $6E, $6F, $00, "Y.SPEAR"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $16
 	.BYTE $7E, $7F, $00 ;tileset hex
@@ -2623,8 +2622,7 @@ screen_set_38:
 
 screen_set_39:
 	screen_set write_hex_direct, write_ppu_address_direct, $0A, $21C4
-	.BYTE $6C, $6D, $00, $36, $46, $32, $33, $01
-	.BYTE $31, $2C ;tileset hex
+	.BYTE $6C, $6D, $00, "W.ST0RM"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $16
 	.BYTE $7C, $7D, $00 ;tileset hex
@@ -2635,8 +2633,7 @@ screen_set_39:
 
 screen_set_3a:
 	screen_set write_hex_direct, write_ppu_address_direct, $0B, $2204
-	.BYTE $48, $49, $00, $21, $46, $20, $33, $33
-	.BYTE $20, $22, $2A ;tileset hex
+	.BYTE $48, $49, $00, "B.ATTACK"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $15
 	.BYTE $58, $59, $00 ;tileset hex
@@ -2647,8 +2644,7 @@ screen_set_3a:
 
 screen_set_3b:
 	screen_set write_hex_direct, write_ppu_address_direct, $0A, $2244
-	.BYTE $4C, $4D, $00, $25, $46, $21, $2B, $20
-	.BYTE $32, $33 ;tileset hex
+	.BYTE $4C, $4D, $00, "F.BLAST"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $16
 	.BYTE $5C, $5D, $00 ;tileset hex
@@ -2659,8 +2655,7 @@ screen_set_3b:
 
 screen_set_3c:
 	screen_set write_hex_direct, write_ppu_address_direct, $0A, $2152
-	.BYTE $68, $69, $00, $2F, $2B, $20, $2D, $33
-	.BYTE $46, $21 ;tileset hex
+	.BYTE $68, $69, $00, "PLANT.B"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $16
 	.BYTE $78, $79, $00 ;tileset hex
@@ -2671,8 +2666,7 @@ screen_set_3c:
 
 screen_set_3d:
 	screen_set write_hex_direct, write_ppu_address_direct, $0B, $2192
-	.BYTE $66, $67, $00, $2A, $2D, $28, $26, $27
-	.BYTE $33, $46, $22 ;tileset hex
+	.BYTE $66, $67, $00, "KNIGHT.C"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $15
 	.BYTE $76, $77, $00 ;tileset hex
@@ -2683,8 +2677,7 @@ screen_set_3d:
 
 screen_set_3e:
 	screen_set write_hex_direct, write_ppu_address_direct, $0B, $21D2
-	.BYTE $6A, $6B, $00, $32, $28, $2B, $35, $24
-	.BYTE $31, $46, $33 ;tileset hex
+	.BYTE $6A, $6B, $00, "SILVER.T"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $15
 	.BYTE $7A, $7B, $00 ;tileset hex
@@ -2695,8 +2688,7 @@ screen_set_3e:
 
 screen_set_3f:
 	screen_set write_hex_direct, write_ppu_address_direct, $0A, $2212
-	.BYTE $4A, $4B, $00, $22, $46, $25, $2B, $20
-	.BYTE $32, $27 ;tileset hex
+	.BYTE $4A, $4B, $00, "C.FLASH"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $16
 	.BYTE $5A, $5B, $00 ;tileset hex
@@ -2707,7 +2699,7 @@ screen_set_3f:
 
 screen_set_40:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2252
-	.BYTE $74, $75, $00, $21, $24, $20, $33 ;tileset hex
+	.BYTE $74, $75, $00, "BEAT"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $19
 	.BYTE $E6, $E7, $00 ;tileset hex
@@ -3962,20 +3954,19 @@ screen_set_48:
 	.BYTE topleft_palette_1 | topright_palette_1 | bottomleft_palette_1 | bottomright_palette_1
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/common.asm"
+
 screen_set_49:
 	screen_set write_hex_direct, write_ppu_address_direct, $13, $22C6
-	.BYTE $17, $0F, $11, $0B, $17, $0B, $18, $2D
-	.BYTE $00, $21, $0F, $2C, $16, $16, $00, $1D
-	.BYTE $1E, $19, $1A ;tileset hex
+	.BYTE "MEGAMAN: WE'LL STOP"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $04, $2D
-	.BYTE $23, $19, $1F, $29 ;tileset hex
+	.BYTE "YOU!"
 	.BYTE 0 ;end
 
 screen_set_4a:
 	screen_set write_hex_direct, write_ppu_address_direct, $10, $230B
-	.BYTE $10, $19, $16, $16, $19, $21, $00, $17
-	.BYTE $0F, $2E, $00, $1C, $1F, $1D, $12, $29 ;tileset hex
+	.BYTE "FOLLOW ME, RUSH!"
 	.BYTE 0 ;end
 
 screen_set_4b:
@@ -4012,23 +4003,16 @@ screen_set_4b:
 
 screen_set_4c:
 	screen_set write_hex_direct, write_ppu_address_direct, $13, $2084
-	.BYTE $0C, $1F, $1E, $00, $18, $19, $21, $00
-	.BYTE $13, $00, $18, $19, $00, $16, $19, $18
-	.BYTE $11, $0F, $1C ;tileset hex
+	.BYTE "BUT NOW I NO LONGER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $2D
-	.BYTE $18, $0F, $0F, $0E, $00, $0E, $1C, $25
-	.BYTE $21, $13, $16, $23, $2C, $1D, $00, $12
-	.BYTE $0F, $16, $1A, $25 ;tileset hex
+	.BYTE "NEED DR.WILY'S HELP."
 
 	screen_set write_hex_direct, write_ppu_address_direct, $17, $22C4
-	.BYTE $0D, $19, $17, $0F, $00, $0B, $18, $0E
-	.BYTE $00, $10, $0B, $0D, $0F, $00, $17, $23
-	.BYTE $00, $1A, $19, $21, $0F, $1C, $2E ;tileset hex
+	.BYTE "COME AND FACE MY POWER,"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $29
-	.BYTE $17, $0F, $11, $0B, $17, $0B, $18, $29
-	.BYTE $29 ;tileset hex
+	.BYTE "MEGAMAN!!"
 	.BYTE 0 ;end
 
 screen_set_4d:
@@ -4036,9 +4020,7 @@ screen_set_4e:
 screen_set_4f:
 screen_set_50:
 	screen_set write_hex_direct, write_ppu_address_direct, $13, $21C5
-	.BYTE $13, $18, $00, $1E, $12, $0F, $00, $23
-	.BYTE $0F, $0B, $1C, $00, $03, $01, $22, $22
-	.BYTE $00, $0B, $0E ;tileset hex
+	.BYTE "IN THE YEAR 20XX AD"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $03, $00
 	.BYTE $30 ;tileset hex
@@ -4046,29 +4028,21 @@ screen_set_50:
 
 screen_set_51:
 	screen_set write_hex_direct, write_ppu_address_direct, $14, $2286
-	.BYTE $1E, $12, $0F, $00, $02, $1D, $1E, $00
-	.BYTE $0B, $18, $18, $1F, $0B, $16, $00, $1C
-	.BYTE $19, $0C, $19, $1E ;tileset hex
+	.BYTE "THE 1ST ANNUAL ROBOT"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $13, $2C
-	.BYTE $1E, $19, $1F, $1C, $18, $0B, $17, $0F
-	.BYTE $18, $1E, $00, $21, $0B, $1D, $00, $12
-	.BYTE $0F, $16, $0E ;tileset hex
+	.BYTE "TOURNAMENT WAS HELD"
 	.BYTE 0 ;end
 
 screen_set_52:
 	screen_set write_hex_direct, write_ppu_address_direct, $15, $2286
-	.BYTE $21, $13, $1E, $12, $00, $09, $00, $19
-	.BYTE $10, $00, $1E, $12, $0F, $00, $21, $19
-	.BYTE $1C, $16, $0E, $2C, $1D ;tileset hex
+	.BYTE "WITH 8 OF THE WORLD'S"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $15, $2B
-	.BYTE $17, $19, $1D, $1E, $00, $1A, $19, $21
-	.BYTE $0F, $1C, $10, $1F, $16, $00, $1C, $19
-	.BYTE $0C, $19, $1E, $1D, $25 ;tileset hex
+	.BYTE "MOST POWERFUL ROBOTS."
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $2B
-	.BYTE $0C, $1F, $1E ;tileset hex
+	.BYTE "BUT"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $03, $00
 	.BYTE $30 ;tileset hex
@@ -5189,29 +5163,19 @@ screen_set_5b:
 
 screen_set_5c:
 	screen_set write_hex_direct, write_ppu_address_direct, $18, $2084
-	.BYTE $17, $1C, $25, $22, $2E, $00, $1E, $12
-	.BYTE $0F, $00, $1D, $1A, $19, $18, $1D, $19
-	.BYTE $1C, $00, $19, $10, $00, $1E, $12, $0F ;tileset hex
+	.BYTE "MR.X, THE SPONSOR OF THE"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $18, $28
-	.BYTE $1E, $19, $1F, $1C, $18, $0B, $17, $0F
-	.BYTE $18, $1E, $2E, $00, $1E, $19, $19, $15
-	.BYTE $00, $0D, $19, $18, $1E, $1C, $19, $16 ;tileset hex
+	.BYTE "TOURNAMENT, TOOK CONTROL"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $17, $28
-	.BYTE $19, $10, $00, $1E, $12, $0F, $00, $1C
-	.BYTE $19, $0C, $19, $1E, $1D, $00, $0B, $18
-	.BYTE $0E, $00, $0C, $0F, $11, $0B, $18 ;tileset hex
+	.BYTE "OF THE ROBOTS AND BEGAN"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $17, $22C4
-	.BYTE $1E, $19, $00, $1E, $0B, $15, $0F, $00
-	.BYTE $19, $20, $0F, $1C, $00, $1E, $12, $0F
-	.BYTE $00, $21, $19, $1C, $16, $0E, $25 ;tileset hex
+	.BYTE "TO TAKE OVER THE WORLD."
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $15, $29
-	.BYTE $17, $0F, $11, $0B, $17, $0B, $18, $2D
-	.BYTE $00, $17, $1C, $25, $22, $29, $29, $00
-	.BYTE $21, $12, $23, $29, $28 ;tileset hex
+	.BYTE "MEGAMAN: MR.X!! WHY!?"
 	.BYTE 0 ;end
 
 screen_set_5d:
@@ -5265,210 +5229,192 @@ screen_set_5d:
 
 screen_set_5e:
 	screen_set write_hex_direct, write_ppu_address_direct, $17, $2084
-	.BYTE $17, $1C, $25, $22, $2D, $00, $13, $1E
-	.BYTE $2C, $1D, $00, $1E, $13, $17, $0F, $00
-	.BYTE $1E, $19, $00, $1E, $0F, $16, $16 ;tileset hex
+	.BYTE "MR.X: IT'S TIME TO TELL"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $15, $29
-	.BYTE $23, $19, $1F, $00, $1E, $12, $0F, $00
-	.BYTE $1E, $1C, $1F, $1E, $12, $25, $00, $13
-	.BYTE $00, $12, $0B, $20, $0F ;tileset hex
+	.BYTE "YOU THE TRUTH. I HAVE"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $11, $2B
-	.BYTE $0C, $0F, $0F, $18, $00, $17, $0B, $18
-	.BYTE $13, $1A, $1F, $16, $0B, $1E, $13, $18
-	.BYTE $11 ;tileset hex
+	.BYTE "BEEN MANIPULATING"
 
 	screen_set write_hex_direct, write_ppu_address_direct, $17, $22C4
-	.BYTE $1E, $12, $0B, $1E, $00, $10, $19, $19
-	.BYTE $16, $2E, $00, $0E, $1C, $25, $21, $13
-	.BYTE $16, $23, $00, $10, $1C, $19, $17 ;tileset hex
+	.BYTE "THAT FOOL, DR.WILY FROM"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0E, $29
-	.BYTE $1E, $12, $0F, $00, $0C, $0F, $11, $13
-	.BYTE $18, $18, $13, $18, $11, $25 ;tileset hex
+	.BYTE "THE BEGINNING."
 	.BYTE 0 ;end
+
+.INCLUDE "constants/charmap/get_weapons.asm"
 
 screen_set_5f:
 screen_set_60:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $3B
-	.BYTE $0C, $25, $0B, $1E, $1E, $0B, $0D, $15 ;tileset hex
+	.BYTE "B.ATTACK"
 	.BYTE 0 ;end
 
 screen_set_61:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3B
-	.BYTE $21, $25, $1D, $1E, $19, $1C, $17 ;tileset hex
+	.BYTE "W.STORM"
 	.BYTE 0 ;end
 
 screen_set_62:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3B
-	.BYTE $1A, $16, $0B, $18, $1E, $25, $0C ;tileset hex
+	.BYTE "PLANT.B"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $3B
-	.BYTE $0B, $18, $0E ;tileset hex
+	.BYTE "AND"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $3B
-	.BYTE $1C, $1F, $1D, $12, $00, $14, $0F, $1E ;tileset hex
+	.BYTE "RUSH JET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3A
-	.BYTE $0B, $0E, $0B, $1A, $1E, $19, $1C ;tileset hex
+	.BYTE "ADAPTOR"
 	.BYTE 0 ;end
 
 screen_set_63:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3B
-	.BYTE $10, $25, $0C, $16, $0B, $1D, $1E ;tileset hex
+	.BYTE "F.BLAST"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $3B
-	.BYTE $0B, $18, $0E ;tileset hex
+	.BYTE "AND"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0A, $3B
-	.BYTE $1C, $1F, $1D, $12, $00, $1A, $19, $21
-	.BYTE $0F, $1C ;tileset hex
+	.BYTE "RUSH POWER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $38
-	.BYTE $0B, $0E, $0B, $1A, $1E, $19, $1C ;tileset hex
+	.BYTE "ADAPTOR"
 	.BYTE 0 ;end
 
 screen_set_64:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3B
-	.BYTE $23, $25, $1D, $1A, $0F, $0B, $1C ;tileset hex
+	.BYTE "Y.SPEAR"
 	.BYTE 0 ;end
 
 screen_set_65:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $3B
-	.BYTE $1D, $13, $16, $20, $0F, $1C, $25, $1E ;tileset hex
+	.BYTE "SILVER.T"
 	.BYTE 0 ;end
 
 screen_set_66:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $3B
-	.BYTE $15, $18, $13, $11, $12, $1E, $25, $0D ;tileset hex
+	.BYTE "KNIGHT.C"
 	.BYTE 0 ;end
 
 screen_set_67:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3B
-	.BYTE $0D, $25, $10, $16, $1C, $1D, $12 ;tileset hex
+	.BYTE "C.FLRSH"
 	.BYTE 0 ;end
 
 screen_set_68:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3B
-	.BYTE $23, $25, $1D, $1A, $0F, $0B, $1C ;tileset hex
+	.BYTE "Y.SPEAR"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $3B
-	.BYTE $0B, $18, $0E ;tileset hex
+	.BYTE "AND"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $39
-	.BYTE $0C, $0F, $0B, $1E, $00, $0F, $B8, $1A
-	.BYTE $0B, $1C, $1E, $1D ;tileset hex
+	.BYTE "BEAT E-PARTS"
 	.BYTE 0 ;end
 
 screen_set_69:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $3B
-	.BYTE $1D, $13, $16, $20, $0F, $1C, $25, $1E ;tileset hex
+	.BYTE "SILVER.T"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $3A
-	.BYTE $0B, $18, $0E ;tileset hex
+	.BYTE "AND"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $39
-	.BYTE $0C, $0F, $0B, $1E, $00, $0C, $B8, $1A
-	.BYTE $0B, $1C, $1E, $1D ;tileset hex
+	.BYTE "BEAT B-PARTS"
 	.BYTE 0 ;end
 
 screen_set_6a:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $3B
-	.BYTE $15, $18, $13, $11, $12, $1E, $25, $0D ;tileset hex
+	.BYTE "KNIGHT.C"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $3A
-	.BYTE $0B, $18, $0E ;tileset hex
+	.BYTE "AND"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $39
-	.BYTE $0C, $0F, $0B, $1E, $00, $0B, $B8, $1A
-	.BYTE $0B, $1C, $1E, $1D ;tileset hex
+	.BYTE "BEAT A-PARTS"
 	.BYTE 0 ;end
 
 screen_set_6b:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2185
-	.BYTE $23, $19, $1F, $00, $11, $0F, $1E ;tileset hex
+	.BYTE "YOU GET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $3B
-	.BYTE $0D, $25, $10, $16, $1C, $1D, $12 ;tileset hex
+	.BYTE "C.FLRSH"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $3B
-	.BYTE $0B, $18, $0E ;tileset hex
+	.BYTE "AND"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $39
-	.BYTE $0C, $0F, $0B, $1E, $00, $1E, $B8, $1A
-	.BYTE $0B, $1C, $1E, $1D ;tileset hex
+	.BYTE "BEAT T-PARTS"
 	.BYTE 0 ;end
+
+.INCLUDE "constants/charmap/mr.x.asm"
 
 screen_set_6c:
 	screen_set write_hex_direct, write_ppu_address_direct, $13, $2086
-	.BYTE $97, $A3, $00, $9D, $8D, $92, $8F, $97
-	.BYTE $8F, $00, $90, $99, $9C, $00, $A1, $99
-	.BYTE $9C, $96, $8E ;tileset hex
+	.BYTE "MY SCHEME FOR WORLD"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0E, $2D
-	.BYTE $8E, $99, $97, $93, $98, $8B, $9E, $93
-	.BYTE $99, $98, $00, $92, $8B, $9D ;tileset hex
+	.BYTE "DOMINATION HAS"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $06, $32
-	.BYTE $90, $8B, $93, $96, $8E, $A9 ;tileset hex
+	.BYTE "FAILD!"
 	.BYTE 0 ;end
 
 screen_set_6d:
 	screen_set write_hex_direct, write_ppu_address_direct, $10, $2086
-	.BYTE $8C, $9F, $9E, $00, $93, $00, $9D, $9E
-	.BYTE $93, $96, $96, $00, $92, $8B, $A0, $8F ;tileset hex
+	.BYTE "BUT I STILL HAVE"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0F, $30
-	.BYTE $8F, $98, $99, $9F, $91, $92, $00, $9A
-	.BYTE $99, $A1, $8F, $9C, $00, $9E, $99 ;tileset hex
+	.BYTE "ENOUGH POWER TO"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $31
-	.BYTE $8E, $8F, $9D, $9E, $9C, $99, $A3, $00
-	.BYTE $A3, $99, $9F, $A9 ;tileset hex
+	.BYTE "DESTROY YOU!"
 	.BYTE 0 ;end
 
 screen_set_6e:
 	screen_set write_hex_direct, write_ppu_address_direct, $14, $2086
-	.BYTE $96, $8F, $9E, $00, $9E, $92, $8F, $00
-	.BYTE $90, $93, $98, $8B, $96, $00, $8C, $8B
-	.BYTE $9E, $9E, $96, $8F ;tileset hex
+	.BYTE "LET THE FINAL BATTLE"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $06, $2C
-	.BYTE $8C, $8F, $91, $93, $98, $A9 ;tileset hex
+	.BYTE "BEGIN!"
 	.BYTE 0 ;end
 
 screen_set_6f:
@@ -5491,284 +5437,268 @@ screen_set_6f:
 	.BYTE $AF ;tileset hex
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/common.asm"
+
 screen_set_70:
 	screen_set write_hex_direct, write_ppu_address_direct, $05, $21CD
-	.BYTE $1D, $1E, $0B, $10, $10 ;tileset hex
+	.BYTE "STAFF"
 	.BYTE 0 ;end
+
+.INCLUDE "constants/charmap/bosses.asm"
 
 screen_set_71:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $21 ;tileset hex
+	.BYTE "DWNB-41"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $39
-	.BYTE $2C, $36, $33, $44, $44, $2B, $3C, $2E
-	.BYTE $46 ;tileset hex
+	.BYTE "BLIZZARD-"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $1B
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 	.BYTE 0 ;end
 
 screen_set_72:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $38
-	.BYTE $32, $33, $3C, $39, $30, $3F, $37, $33 ;tileset hex
+	.BYTE "HIROFUMI"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $05, $19
-	.BYTE $39, $31, $2B, $41, $2B ;tileset hex
+	.BYTE "OGAWA"
 	.BYTE 0 ;end
 
 screen_set_73:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $22 ;tileset hex
+	.BYTE "DWNB-42"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $39
-	.BYTE $2D, $2F, $38, $3E, $2B, $3F, $3C, $46 ;tileset hex
+	.BYTE "CENTAUR-"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $1C
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 	.BYTE 0 ;end
 
 screen_set_74:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $06, $39
-	.BYTE $35, $2B, $44, $3F, $35, $33 ;tileset hex
+	.BYTE "KAZUKI"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $19
-	.BYTE $35, $33, $2E, $39, $31, $3F, $2D, $32
-	.BYTE $33 ;tileset hex
+	.BYTE "KIDOGUCHI"
 	.BYTE 0 ;end
 
 screen_set_75:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $23 ;tileset hex
+	.BYTE "DWNB-43"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $39
-	.BYTE $30, $36, $2B, $37, $2F, $37, $2B, $38 ;tileset hex
+	.BYTE "FLAMEMAN"
 	.BYTE 0 ;end
 
 screen_set_76:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $38
-	.BYTE $38, $39, $3C, $33, $3E, $3D, $3F, $31
-	.BYTE $3F ;tileset hex
+	.BYTE "NORITSUGU"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $18
-	.BYTE $35, $3F, $3C, $39, $35, $2B, $41, $2B ;tileset hex
+	.BYTE "KUROKAWA"
 	.BYTE 0 ;end
 
 screen_set_77:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $24 ;tileset hex
+	.BYTE "DWNB-44"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $39
-	.BYTE $35, $38, $33, $31, $32, $3E, $37, $2B
-	.BYTE $38 ;tileset hex
+	.BYTE "KNIGHTMAN"
 	.BYTE 0 ;end
 
 screen_set_78:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $06, $39
-	.BYTE $2E, $2B, $38, $33, $2F, $36 ;tileset hex
+	.BYTE "DANIEL"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $06, $1A
-	.BYTE $40, $2B, $36, $36, $33, $2F ;tileset hex
+	.BYTE "VALLIE"
 	.BYTE 0 ;end
 
 screen_set_79:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $25 ;tileset hex
+	.BYTE "DWNB-45"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $39
-	.BYTE $3A, $36, $2B, $38, $3E, $37, $2B, $38 ;tileset hex
+	.BYTE "PLANTMAN"
 	.BYTE 0 ;end
 
 screen_set_7a:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $38
-	.BYTE $38, $39, $2C, $3F, $32, $33, $3C, $39 ;tileset hex
+	.BYTE "NOBUHIRO"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $19
-	.BYTE $32, $39, $3D, $32, $33, $38, $39 ;tileset hex
+	.BYTE "HOSHINO"
 	.BYTE 0 ;end
 
 screen_set_7b:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $26 ;tileset hex
+	.BYTE "DWNB-46"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $39
-	.BYTE $3E, $39, $37, $2B, $32, $2B, $41, $35
-	.BYTE $46 ;tileset hex
+	.BYTE "TOMAHAWK-"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $1B
-	.BYTE $37, $2B, $38 ;tileset hex
+	.BYTE "MAN"
 	.BYTE 0 ;end
 
 screen_set_7c:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $38
-	.BYTE $43, $39, $3D, $32, $33, $38, $39, $2C
-	.BYTE $3F ;tileset hex
+	.BYTE "YOSHINOBU"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $04, $19
-	.BYTE $3D, $3F, $2E, $2B ;tileset hex
+	.BYTE "SUDA"
 	.BYTE 0 ;end
 
 screen_set_7d:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $27 ;tileset hex
+	.BYTE "DWNB-47"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $39
-	.BYTE $41, $33, $38, $2E, $37, $2B, $38 ;tileset hex
+	.BYTE "WINDMAN"
 	.BYTE 0 ;end
 
 screen_set_7e:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $07, $38
-	.BYTE $37, $33, $2D, $32, $2B, $2F, $36 ;tileset hex
+	.BYTE "MICHAEL"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $06, $1A
-	.BYTE $36, $2F, $2B, $2E, $2F, $3C ;tileset hex
+	.BYTE "LEADER"
 	.BYTE 0 ;end
 
 screen_set_7f:
 	screen_set write_hex_direct, write_ppu_address_direct, $07, $2184
-	.BYTE $2E, $41, $38, $2C, $46, $24, $28 ;tileset hex
+	.BYTE "DWNB-48"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $09, $39
-	.BYTE $43, $2B, $37, $2B, $3E, $39, $37, $2B
-	.BYTE $38 ;tileset hex
+	.BYTE "YAMATOMAN"
 	.BYTE 0 ;end
 
 screen_set_80:
 	screen_set write_hex_direct, write_ppu_address_direct, $08, $2195
-	.BYTE $2E, $2F, $3D, $33, $31, $38, $2F, $3C ;tileset hex
+	.BYTE "DESIGNER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $38
-	.BYTE $3C, $2B, $33 ;tileset hex
+	.BYTE "RAI"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $08, $1E
-	.BYTE $33, $2D, $32, $33, $35, $2B, $41, $2B ;tileset hex
+	.BYTE "ICHIKAWA"
 	.BYTE 0 ;end
+
+.INCLUDE "constants/charmap/common.asm"
 
 screen_set_81:
 	screen_set copy_hex_value, write_ppu_address_direct, $0E, $2008
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0E, $12
-	.BYTE $2F, $1D, $0B, $19, $1C, $13, $2F, $1E
-	.BYTE $1D, $1F, $0C, $0B, $15, $13 ;tileset hex
+	.BYTE $2F, "SAORI", $2F, "TSUBAKI"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $1E, $1D, $1F, $23, $19, $1D, $12, $13
-	.BYTE $2F, $1D, $12, $13, $18, $19, $0E, $0B ;tileset hex
+	.BYTE "TSUYOSHI", $2F, "SHINODA"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $2F, $1E, $19, $17, $19, $0B, $15, $13
-	.BYTE $2F, $12, $13, $1C, $19, $1D, $0F, $2F ;tileset hex
+	.BYTE $2F, "TOMOAKI", $2F, "HIROSE", $2F
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $2F, $17, $13, $15, $13, $2F, $15, $0B
-	.BYTE $21, $0B, $1D, $12, $13, $17, $0B, $2F ;tileset hex
+	.BYTE $2F, "MIKI", $2F, "KAWASHIMA", $2F
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $1D, $0B, $1E, $19, $1D, $12, $13, $2F
-	.BYTE $1D, $0B, $15, $0B, $17, $19, $1E, $19 ;tileset hex
+	.BYTE "SATOSHI", $2F, "SAKAMOTO"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $1E, $19, $17, $19, $15, $19, $2F, $17
-	.BYTE $13, $23, $0B, $17, $19, $1E, $19, $2F ;tileset hex
+	.BYTE "TOMOKO", $2F, "MIYAMOTO", $2F
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $17, $13, $1E, $1D, $1F, $17, $0B, $1D
-	.BYTE $0B, $2F, $18, $0B, $11, $0B, $23, $0B ;tileset hex
+	.BYTE "MITSUMASA", $2F, "NAGAYA"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0E, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0E, $12
-	.BYTE $2F, $1E, $19, $17, $19, $12, $13, $15
-	.BYTE $19, $2F, $1D, $0B, $1E, $19 ;tileset hex
+	.BYTE $2F, "TOMOHIKO", $2F, "SATO"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $14
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $2F, $21, $0B, $15, $0B, $2F, $17, $0B
-	.BYTE $0F, $0E, $0B, $2F ;tileset hex
+	.BYTE $2F, "WAKA", $2F, "MAEDA", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $15, $0F, $18, $14, $13, $2F, $1E, $1D
-	.BYTE $1F, $14, $13, $17, $19, $1E, $19, $2F ;tileset hex
+	.BYTE "KENJI", $2F, "TSUJIMOTO", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $1E, $0B, $15, $0B, $15, $19, $2F, $0B
-	.BYTE $1D, $0B, $17, $13 ;tileset hex
+	.BYTE "TAKAKO", $2F, "ASAMI"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $23, $0B, $1D, $1F, $15, $19, $2F, $21
-	.BYTE $0B, $1E, $0B, $18, $0B, $0C, $0F, $2F ;tileset hex
+	.BYTE "YASUKO", $2F, "WATANABE", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0E, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0E, $12
-	.BYTE $2F, $1D, $0F, $13, $13, $0D, $12, $13
-	.BYTE $2F, $12, $19, $18, $17, $0B ;tileset hex
+	.BYTE $2F, "SEIICHI", $2F, "HONMA"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $1D, $12, $13, $11, $0F, $12, $0B, $1C
-	.BYTE $1F, $2F, $15, $0B, $11, $0B, $21, $0B ;tileset hex
+	.BYTE "SHIGEHARU", $2F, "KAGAWA"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $2F, $0B, $15, $13, $19, $2F, $19, $10
-	.BYTE $1F, $14, $13, $2F ;tileset hex
+	.BYTE $2F, "AKIO", $2F, "OFUJI", $2F
 	.BYTE 0 ;end
 
 screen_set_82:
@@ -5776,109 +5706,91 @@ screen_set_82:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $2F, $15, $0F, $18, $13, $0D, $12, $13
-	.BYTE $1C, $19, $2F, $1F, $0F, $0E, $0B, $2F ;tileset hex
+	.BYTE $2F, "KENICHIRO", $2F, "UEDA", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $12, $0E
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $12, $0E
-	.BYTE $2F, $15, $0B, $1E, $1D, $1F, $15, $13
-	.BYTE $2F, $17, $1F, $11, $13, $1D, $12, $13
-	.BYTE $17, $0B ;tileset hex
+	.BYTE $2F, "KATSUKI", $2F, "MUGISHIMA"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $12, $0E
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $12, $0E
-	.BYTE $2F, $23, $1F, $13, $0D, $12, $13, $1C
-	.BYTE $19, $2F, $12, $0B, $1C, $1F, $23, $0B
-	.BYTE $17, $0B ;tileset hex
+	.BYTE $2F, "YUICHIRO", $2F, "HARUYAMA"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $0B, $23, $0B, $2F, $12, $0B, $1E, $1E
-	.BYTE $19, $1C, $13, $2F ;tileset hex
+	.BYTE "AYA", $2F, "HATTORI", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $1D, $12, $1F, $18, $14, $13, $2F, $1E
-	.BYTE $0F, $1C, $0B, $1F, $0D, $12, $13, $2F ;tileset hex
+	.BYTE "SHUNJI", $2F, "TERAUCHI", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0A, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0A, $16
-	.BYTE $2F, $16, $1F, $0D, $2F, $17, $13, $1C
-	.BYTE $19, $18 ;tileset hex
+	.BYTE $2F, "LUC", $2F, "MIRON"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $16
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $2F, $0E, $0B, $20, $13, $0E, $2F, $0E
-	.BYTE $1F, $18, $18, $2F ;tileset hex
+	.BYTE $2F, "DAVID", $2F, "DUNN", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $0C
-	.BYTE $1A, $19, $16, $2F, $1D, $0B, $18, $1E
-	.BYTE $0B, $17, $0B, $18, $1D, $2F, $0C, $0B
-	.BYTE $0D, $0B, $1C, $1E ;tileset hex
+	.BYTE "POL", $2F, "SANTAMANS", $2F, "BACART"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $18, $13, $0D, $19, $16, $0B, $1D, $2F
-	.BYTE $10, $0F, $16, $1D ;tileset hex
+	.BYTE "NICOLAS", $2F, "FELS"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $14
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $17, $0B, $1C, $0D, $19, $2F, $20, $0B
-	.BYTE $1C, $11, $0B, $2F ;tileset hex
+	.BYTE "MARCO", $2F, "VARGA", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $18, $0B, $1E, $12, $0B, $18, $2F, $0D
-	.BYTE $0B, $17, $1A, $0C, $0F, $16, $16, $2F ;tileset hex
+	.BYTE "NATHAN", $2F, "CAMPBELL", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0E, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0E, $12
-	.BYTE $2F, $1A, $0F, $16, $16, $0F, $2F, $16
-	.BYTE $31, $20, $12, $19, $16, $17 ;tileset hex
+	.BYTE $2F, "PELLE", $2F, "L", $31, "VHOLM"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $14
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $14, $1F, $1D, $19, $18, $2F, $1D, $19
-	.BYTE $1F, $16, $0F, $2F ;tileset hex
+	.BYTE "JUSON", $2F, "SOULE", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $1D, $12, $13, $18, $2F, $15, $23, $1F
-	.BYTE $18, $11, $2F, $0C, $19, $18, $11, $2F ;tileset hex
+	.BYTE "SHIN", $2F, "KYUNG", $2F, "BONG", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $0C, $12
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0C, $14
-	.BYTE $0B, $1C, $19, $18, $2F, $0C, $1F, $18
-	.BYTE $0E, $0F, $16, $1D ;tileset hex
+	.BYTE "ARON", $2F, "BUNDELS"
 	.BYTE 0 ;end
 
 screen_set_83:
@@ -5886,15 +5798,13 @@ screen_set_83:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $16, $0F, $0F, $2F, $15, $19, $18, $1D
-	.BYTE $1E, $0B, $18, $1E, $13, $18, $19, $1F ;tileset hex
+	.BYTE "LEE", $2F, "KONSTANTINOU"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $10
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $10, $10
-	.BYTE $2F, $1A, $0B, $1E, $1C, $13, $0D, $15
-	.BYTE $2F, $18, $0B, $12, $19, $18, $2F, $2F ;tileset hex
+	.BYTE $2F, "PATRICK", $2F, "NAHON", $2F, $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $10, $10
 	.BYTE $2F ;tileset hex
@@ -5982,9 +5892,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $09
-	.BYTE $9B, $8F, $8B, $80, $8D, $8D, $84, $91
-	.BYTE $9B ;tileset hex
+	.BYTE "-PLANNER-"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -5995,9 +5906,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $0A
-	.BYTE $1E, $1F, $1C, $15, $0F, $23, $26, $07
-	.BYTE $02, $04 ;tileset hex
+	.BYTE "TURKEY-613"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $00
 	.BYTE $2F ;tileset hex
@@ -6011,8 +5923,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $08
-	.BYTE $9B, $87, $84, $8B, $8F, $84, $91, $9B ;tileset hex
+	.BYTE "-HELPER-"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -6023,8 +5937,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $06
-	.BYTE $0C, $0B, $17, $0C, $0F, $0F ;tileset hex
+	.BYTE "BAMBEE"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $2F ;tileset hex
@@ -6036,7 +5952,7 @@ screen_set_84:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $05
-	.BYTE $17, $13, $24, $1F, $25 ;tileset hex
+	.BYTE "MIZU."
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $2F ;tileset hex
@@ -6047,10 +5963,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $0C
-	.BYTE $2F, $9B, $8E, $81, $89, $84, $82, $93
-	.BYTE $2F, $83, $84, $92, $88, $86, $8D, $84
-	.BYTE $91, $9B, $2F, $2F ;tileset hex
+	.BYTE $2F, "-OBJECT", $2F, "DESIGNER-", $2F, $2F
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
@@ -6058,9 +5974,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $09
-	.BYTE $15, $0B, $24, $1F, $1D, $12, $13, $30
-	.BYTE $13 ;tileset hex
+	.BYTE "KAZUSHI", $30, "I"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -6072,8 +5989,7 @@ screen_set_84:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $0A
-	.BYTE $1E, $19, $1D, $12, $13, $26, $0D, $12
-	.BYTE $0B, $18 ;tileset hex
+	.BYTE "TOSHI-CHAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $00
 	.BYTE $2F ;tileset hex
@@ -6085,7 +6001,7 @@ screen_set_84:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $08
-	.BYTE $13, $18, $0B, $10, $15, $13, $18, $11 ;tileset hex
+	.BYTE "INAFKING"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -6097,7 +6013,7 @@ screen_set_84:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $07
-	.BYTE $1E, $19, $17, $26, $1A, $19, $18 ;tileset hex
+	.BYTE "TOM-PON"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $2F ;tileset hex
@@ -6108,10 +6024,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $0C
-	.BYTE $2F, $9B, $92, $82, $91, $8E, $8B, $8B
-	.BYTE $2F, $83, $84, $92, $88, $86, $8D, $84
-	.BYTE $91, $9B, $2F, $2F ;tileset hex
+	.BYTE $2F, "-SCROLL", $2F, "DESIGNER-", $2F, $2F
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
@@ -6119,8 +6035,10 @@ screen_set_84:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $05
-	.BYTE $0C, $0B, $18, $0E, $23 ;tileset hex
+	.BYTE "BANDY"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $08, $00
 	.BYTE $2F ;tileset hex
@@ -6132,7 +6050,7 @@ screen_set_84:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $0E, $0B, $13 ;tileset hex
+	.BYTE "DAI"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $09, $00
 	.BYTE $2F ;tileset hex
@@ -6146,7 +6064,7 @@ screen_set_85:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $07
-	.BYTE $0E, $19, $18, $0D, $12, $0B, $18 ;tileset hex
+	.BYTE "DONCHAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $2F ;tileset hex
@@ -6160,9 +6078,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $04, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $0C
-	.BYTE $9B, $8F, $91, $8E, $86, $91, $80, $8C
-	.BYTE $8C, $84, $91, $9B ;tileset hex
+	.BYTE "-PROGRAMMER-"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $04, $00
 	.BYTE $2F ;tileset hex
@@ -6173,9 +6092,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $09
-	.BYTE $17, $13, $0D, $12, $0B, $0F, $16, $16
-	.BYTE $0F ;tileset hex
+	.BYTE "MICHAELLE"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -6187,7 +6107,7 @@ screen_set_85:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $08
-	.BYTE $1D, $12, $13, $17, $13, $1E, $0B, $18 ;tileset hex
+	.BYTE "SHIMITAN"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -6198,10 +6118,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $0C
-	.BYTE $2F, $2F, $9B, $92, $8E, $94, $8D, $83
-	.BYTE $2F, $82, $8E, $8C, $8F, $8E, $92, $84
-	.BYTE $91, $9B, $2F, $2F ;tileset hex
+	.BYTE $2F, $2F, "-SOUND", $2F, "COMPOSER-", $2F, $2F
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
@@ -6209,8 +6129,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $08, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $04
-	.BYTE $23, $1F, $15, $19 ;tileset hex
+	.BYTE "YUKO"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $08, $00
 	.BYTE $2F ;tileset hex
@@ -6224,9 +6146,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $09
-	.BYTE $9B, $80, $83, $95, $88, $92, $8E, $91
-	.BYTE $9B ;tileset hex
+	.BYTE "-ADVISOR-"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -6237,8 +6160,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $08
-	.BYTE $1A, $0B, $1E, $0B, $1C, $13, $1C, $19 ;tileset hex
+	.BYTE "PATARIRO"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $00
 	.BYTE $2F ;tileset hex
@@ -6250,8 +6175,7 @@ screen_set_85:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $0C
-	.BYTE $12, $23, $1A, $0F, $1C, $2F, $17, $13
-	.BYTE $0D, $15, $0F, $23 ;tileset hex
+	.BYTE "HYPER", $2F, "MICKEY"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $04, $00
 	.BYTE $2F ;tileset hex
@@ -6262,10 +6186,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $0C
-	.BYTE $9B, $92, $94, $8F, $84, $91, $2F, $93
-	.BYTE $84, $92, $93, $2F, $8F, $8B, $80, $98
-	.BYTE $84, $91, $9B, $2F ;tileset hex
+	.BYTE "-SUPER", $2F, "TEST", $2F, "PLAYER-", $2F ;tileset hex
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
@@ -6273,8 +6197,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $06, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $07
-	.BYTE $1A, $1F, $15, $1F, $0D, $12, $13 ;tileset hex
+	.BYTE "PUKUCHI"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $07, $00
 	.BYTE $2F ;tileset hex
@@ -6285,10 +6211,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $11, $0C
-	.BYTE $2F, $9B, $92, $8F, $84, $82, $88, $80
-	.BYTE $8B, $2F, $93, $87, $80, $8D, $8A, $92
-	.BYTE $9B ;tileset hex
+	.BYTE $2F, "-SPECIAL", $2F, "THANKS-"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $03, $00
 	.BYTE $2F ;tileset hex
@@ -6299,9 +6225,10 @@ screen_set_85:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $04, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/common.asm"
+
 	screen_set write_hex_direct, set_current_ppu_address, $0C
-	.BYTE $12, $23, $1A, $0F, $1C, $2F, $0C, $0F
-	.BYTE $18, $11, $13, $0F ;tileset hex
+	.BYTE "HYPER", $2F, "BENGIE"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $04, $00
 	.BYTE $2F ;tileset hex
@@ -6315,7 +6242,7 @@ screen_set_86:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $03
-	.BYTE $1C, $23, $19 ;tileset hex
+	.BYTE "RYO"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $09, $00
 	.BYTE $2F ;tileset hex
@@ -6327,7 +6254,7 @@ screen_set_86:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $04
-	.BYTE $0E, $1F, $15, $0F ;tileset hex
+	.BYTE "DUKE"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $08, $00
 	.BYTE $2F ;tileset hex
@@ -6339,8 +6266,7 @@ screen_set_86:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $0A
-	.BYTE $17, $19, $15, $1F, $19, $26, $13, $21
-	.BYTE $0B, $19 ;tileset hex
+	.BYTE "MOKUO-IWAO"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $05, $00
 	.BYTE $2F ;tileset hex
@@ -6351,10 +6277,10 @@ screen_set_86:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
 
+.INCLUDE "constants/charmap/highlight.asm"
+
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $0C
-	.BYTE $80, $8D, $83, $2F, $82, $80, $8F, $82
-	.BYTE $8E, $8C, $2F, $80, $8B, $8B, $2F, $92
-	.BYTE $93, $80, $85, $85 ;tileset hex
+	.BYTE "AND", $2F, "CAPCOM", $2F, "ALL", $2F, "STAFF"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
@@ -6419,6 +6345,8 @@ screen_set_86:
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $14, $0C
 	.BYTE $2F ;tileset hex
 	.BYTE 0 ;end
+
+.INCLUDE "constants/charmap/common.asm"
 
 screen_set_87:
 	screen_set copy_hex_value, write_ppu_address_direct, $14, $2006
@@ -6476,7 +6404,7 @@ screen_set_87:
 	.BYTE $2F ;tileset hex
 
 	screen_set write_hex_direct, set_current_ppu_address, $02
-	.BYTE $0C, $23 ;tileset hex
+	.BYTE "BY"
 
 	screen_set copy_hex_value, increase_ppu_address_by_hex, $09, $00
 	.BYTE $2F ;tileset hex
@@ -6542,16 +6470,17 @@ screen_set_87:
 
 screen_set_88:
 	screen_set write_hex_direct, write_ppu_address_direct, $0F, $232F
-	.BYTE $1E, $19, $00, $0C, $0F, $00, $0D, $19
-	.BYTE $18, $1E, $13, $18, $1F, $0F, $0E ;tileset hex
+	.BYTE "TO BE CONTINUED"
 	.BYTE 0 ;end
+
+.INCLUDE "constants/charmap/weapons_select.asm"
 
 screen_set_89:
 	screen_set copy_hex_value, write_ppu_address_direct, $04, $2048
 	.BYTE $12 ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $1D
-	.BYTE $29, $24, $33 ;tileset hex
+	.BYTE "JET"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $1D
 	.BYTE $40, $41, $47 ;tileset hex
@@ -6568,7 +6497,7 @@ screen_set_8a:
 	.BYTE $12 ;tileset hex
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $1C
-	.BYTE $2F, $01, $36 ;tileset hex
+	.BYTE "P0W"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $03, $1D
 	.BYTE $43, $44, $45 ;tileset hex
@@ -7502,61 +7431,46 @@ screen_set_91:
 	.BYTE topleft_palette_2 | topright_palette_2 | bottomleft_palette_0 | bottomright_palette_0
 	.BYTE 0 ;end
 
+.INCLUDE "constants/charmap/common.asm"
+
 screen_set_92:
 	screen_set write_hex_direct, write_ppu_address_direct, $13, $22C4
-	.BYTE $1E, $1C, $13, $1F, $17, $1A, $12, $0B
-	.BYTE $18, $1E, $00, $0B, $1E, $00, $16, $0B
-	.BYTE $1D, $1E, $2E ;tileset hex
+	.BYTE "TRIUMPHANT AT LAST,"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $14, $2D
-	.BYTE $17, $0F, $11, $0B, $17, $0B, $18, $00
-	.BYTE $0B, $1C, $1C, $0F, $1D, $1E, $0F, $0E
-	.BYTE $00, $1E, $12, $0F ;tileset hex
+	.BYTE "MEGAMAN ARRESTED THE"
 	.BYTE 0 ;end
 
 screen_set_93:
 	screen_set write_hex_direct, write_ppu_address_direct, $15, $22C4
-	.BYTE $18, $19, $1E, $19, $1C, $13, $19, $1F
-	.BYTE $1D, $00, $0E, $1C, $25, $21, $13, $16
-	.BYTE $23, $00, $0B, $18, $0E ;tileset hex
+	.BYTE "NOTORIOUS DR.WILY AND"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $17, $2B
-	.BYTE $0C, $1C, $19, $1F, $11, $12, $1E, $00
-	.BYTE $12, $13, $17, $00, $1E, $19, $00, $14
-	.BYTE $1F, $1D, $1E, $13, $0D, $0F, $25 ;tileset hex
+	.BYTE "BROUGHT HIM TO JUSTICE."
 	.BYTE 0 ;end
 
 screen_set_94:
 	screen_set write_hex_direct, write_ppu_address_direct, $13, $22C4
-	.BYTE $1D, $0F, $18, $1E, $0F, $18, $0D, $0F
-	.BYTE $0E, $00, $1E, $19, $00, $1A, $1C, $13
-	.BYTE $1D, $19, $18 ;tileset hex
+	.BYTE "SENTENCED TO PRISON"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0F, $2D
-	.BYTE $10, $19, $1C, $00, $12, $13, $1D, $00
-	.BYTE $0D, $1C, $13, $17, $0F, $1D, $2E ;tileset hex
+	.BYTE "FOR HIS CRIMES,"
 	.BYTE 0 ;end
 
 screen_set_95:
 	screen_set write_hex_direct, write_ppu_address_direct, $16, $22C4
-	.BYTE $0E, $1C, $25, $21, $13, $16, $23, $00
-	.BYTE $18, $19, $21, $00, $1C, $1F, $16, $0F
-	.BYTE $1D, $00, $19, $20, $0F, $1C ;tileset hex
+	.BYTE "DR.WILY NOW RULES OVER"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $0E, $2A
-	.BYTE $0B, $00, $1A, $1C, $13, $1D, $19, $18
-	.BYTE $00, $0D, $0F, $16, $16, $25 ;tileset hex
+	.BYTE "A PRISON CELL."
 	.BYTE 0 ;end
 
 screen_set_96:
 	screen_set write_hex_direct, write_ppu_address_direct, $0D, $22C4
-	.BYTE $0B, $1E, $00, $16, $19, $18, $11, $00
-	.BYTE $16, $0B, $1D, $1E, $2E ;tileset hex
+	.BYTE "AT LONG LAST,"
 
 	screen_set write_hex_direct, increase_ppu_address_by_hex, $16, $33
-	.BYTE $1E, $12, $0F, $00, $21, $19, $1C, $16
-	.BYTE $0E, $00, $13, $1D, $00, $0B, $1E, $00
-	.BYTE $1A, $0F, $0B, $0D, $0F, $25 ;tileset hex
+	.BYTE "THE WORLD IS AT PEACE."
 	.BYTE 0 ;end
 
 screen_set_97:

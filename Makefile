@@ -1,7 +1,7 @@
 rom_obj := \
 	header.o \
 	main.o \
-	screen.o \
+	miscellaneous.o \
 	sprites.o \
 	stages.o
 
@@ -40,10 +40,12 @@ home := \
 	ram/* \
 	home/*
 
-screen := \
+miscellaneous := \
 	screen.asm \
 	constants/* \
+	constants/charmap/* \
 	macros/* \
+	data/boss_show/* \
 	screen/* \
 	unused/*
 
@@ -153,8 +155,8 @@ main.o: $(audio) $(gfx) $(home)
 	bmp2nes $(_gfx)
 	ca65 main.asm
 
-screen.o: $(screen)
-	ca65 screen.asm
+miscellaneous.o: $(miscellaneous)
+	ca65 miscellaneous.asm
 
 sprites.o: $(sprites)
 	ca65 sprites.asm
